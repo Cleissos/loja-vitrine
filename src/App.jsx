@@ -400,9 +400,10 @@ export default function App() {
       </main>
 
       {/* DETALHES MODAL (Abre quando clica no card ou no botão de lupa) */}
+      {/* DETALHES MODAL CORRIGIDO PARA CELULAR */}
       {selectedProduct && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md overflow-y-auto">
-          <div className="relative w-full max-w-5xl bg-[#14171d] border border-white/10 rounded-[32px] shadow-2xl overflow-hidden my-8">
+        <div className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-4 bg-black/85 backdrop-blur-md overflow-y-auto">
+          <div className="relative w-full max-w-5xl bg-[#14171d] border border-white/10 rounded-[32px] shadow-2xl overflow-hidden my-auto mb-12 lg:mb-8">
             
             {/* Fechar Modal */}
             <button 
@@ -416,7 +417,7 @@ export default function App() {
             <div className="grid grid-cols-1 lg:grid-cols-12">
               
               {/* Coluna 1: Mídias do Produto (Lado Esquerdo) */}
-              <div className="lg:col-span-7 bg-neutral-950 p-6 flex flex-col justify-between min-h-[400px] lg:min-h-[550px]">
+              <div className="lg:col-span-7 bg-neutral-950 p-6 flex flex-col justify-between min-h-[350px] sm:min-h-[400px] lg:min-h-[550px]">
                 
                 {/* Visualizador Principal */}
                 <div className="relative flex-grow flex items-center justify-center rounded-2xl overflow-hidden border border-white/5">
@@ -431,7 +432,6 @@ export default function App() {
                         playsInline
                         className="w-full h-full object-contain max-h-[420px]"
                       />
-                      {/* Botão de Som Alternador */}
                       <button 
                         onClick={() => setVideoMuted(!videoMuted)}
                         className="absolute bottom-4 right-4 p-2 bg-black/60 hover:bg-black/85 text-white rounded-full border border-white/10 transition-colors"
@@ -447,19 +447,18 @@ export default function App() {
                           : selectedProduct.mediaUrl
                       } 
                       alt={selectedProduct.name}
-                      className="w-full h-full object-contain max-h-[420px] rounded-xl"
+                      className="w-full h-full object-contain max-h-[300px] lg:max-h-[420px] rounded-xl"
                     />
                   )}
                 </div>
 
                 {/* Carrossel de Miniaturas */}
                 {selectedProduct.additionalMedia && selectedProduct.additionalMedia.length > 1 && (
-                  <div className="flex gap-3 mt-4 overflow-x-auto pb-2 justify-center">
-                    {/* Se o produto for de vídeo, coloca a miniatura de vídeo na primeira posição */}
+                  <div className="flex gap-3 mt-4 overflow-x-auto pb-2 justify-centerECE">
                     {selectedProduct.mediaType === 'video' && (
                       <button 
                         onClick={() => setActiveMediaIndex(0)}
-                        className={`relative h-16 w-24 rounded-lg overflow-hidden flex-shrink-0 border-2 transition-all ${
+                        className={`relative h-14 w-20 rounded-lg overflow-hidden flex-shrink-0 border-2 transition-all ${
                           activeMediaIndex === 0 ? 'border-emerald-500 scale-105' : 'border-transparent opacity-60'
                         }`}
                       >
@@ -469,15 +468,13 @@ export default function App() {
                       </button>
                     )}
 
-                    {/* Renderiza as outras imagens */}
                     {selectedProduct.additionalMedia.map((media, index) => {
-                      // Se for tipo vídeo, as fotos começam a contar do índice 1 para não sobrepor
                       const itemIndex = selectedProduct.mediaType === 'video' ? index + 1 : index;
                       return (
                         <button
                           key={index}
                           onClick={() => setActiveMediaIndex(itemIndex)}
-                          className={`h-16 w-24 rounded-lg overflow-hidden flex-shrink-0 border-2 transition-all ${
+                          className={`h-14 w-20 rounded-lg overflow-hidden flex-shrink-0 border-2 transition-all ${
                             activeMediaIndex === itemIndex ? 'border-emerald-500 scale-105' : 'border-transparent opacity-60'
                           }`}
                         >
@@ -490,36 +487,31 @@ export default function App() {
               </div>
 
               {/* Coluna 2: Informações e Atendimento (Lado Direito) */}
-              <div className="lg:col-span-5 p-8 flex flex-col justify-between bg-[#14171d]">
+              <div className="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between bg-[#14171d]">
                 <div>
-                  {/* Categoria */}
                   <span className="text-xs font-bold font-mono tracking-widest text-emerald-400 uppercase bg-emerald-500/10 px-3 py-1 rounded-full">
                     {selectedProduct.category}
                   </span>
 
-                  {/* Nome */}
-                  <h1 className="text-3xl font-black text-white mt-4 mb-2">
+                  <h1 className="text-2xl sm:text-3xl font-black text-white mt-4 mb-2">
                     {selectedProduct.name}
                   </h1>
 
-                  {/* Preço */}
                   <div className="flex items-baseline gap-3 mb-6">
-                    <span className="text-3xl font-mono font-black text-white">
+                    <span className="text-2xl sm:text-3xl font-mono font-black text-white">
                       {selectedProduct.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                     </span>
                     {selectedProduct.oldPrice && (
-                      <span className="text-sm text-neutral-500 line-through font-mono">
+                      <span className="text-xs sm:text-sm text-neutral-500 line-through font-mono">
                         {selectedProduct.oldPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                       </span>
                     )}
                   </div>
 
-                  {/* Descrição */}
-                  <p className="text-neutral-300 text-sm leading-relaxed mb-6">
+                  <p className="text-neutral-300 text-xs sm:text-sm leading-relaxed mb-6">
                     {selectedProduct.description}
                   </p>
 
-                  {/* Detalhes / Especificações */}
                   <div className="mb-6">
                     <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-3 font-mono">Especificações Técnicas</h3>
                     <div className="space-y-2 bg-neutral-950/40 p-4 rounded-2xl border border-white/5 text-xs">
@@ -536,21 +528,20 @@ export default function App() {
                 </div>
 
                 {/* Área de Ação & Mensagem Personalizável */}
-                <div className="mt-6 border-t border-white/5 pt-6">
+                <div className="mt-4 border-t border-white/5 pt-4">
                   <div className="bg-emerald-500/5 rounded-2xl p-4 border border-emerald-500/10 mb-4 flex gap-3.5 items-start">
-                    <div className="p-2 bg-emerald-500/10 text-emerald-400 rounded-lg">
+                    <div className="p-2 bg-emerald-500/10 text-emerald-400 rounded-lg hidden sm:block">
                       <MessageCircle className="h-5 w-5 fill-current" />
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-emerald-400 uppercase tracking-wide font-mono">Compra Assistida</h4>
-                      <p className="text-[11px] text-neutral-400 leading-normal mt-1">Ao clicar, enviaremos os dados do produto para o WhatsApp para garantir que você receba o suporte correto no pagamento e retirada.</p>
+                      <p className="text-[11px] text-neutral-400 leading-normal mt-1">Ao clicar, você iniciará uma conversa no WhatsApp com o vendedor para combinar o pagamento e entrega.</p>
                     </div>
                   </div>
 
-                  {/* Botão Compra Rápida WhatsApp */}
                   <button
                     onClick={() => handleWhatsAppLink(selectedProduct)}
-                    className="w-full bg-gradient-to-r from-emerald-500 to-teal-400 text-neutral-950 py-4 rounded-2xl font-bold hover:shadow-xl hover:shadow-emerald-500/15 transition-all duration-300 flex items-center justify-center gap-3 scale-100 hover:scale-[1.01] active:scale-95 cursor-pointer text-sm"
+                    className="w-full bg-gradient-to-r from-emerald-500 to-teal-400 text-neutral-950 py-4 rounded-2xl font-bold hover:shadow-xl hover:shadow-emerald-500/15 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer text-xs sm:text-sm"
                   >
                     <MessageCircle className="h-5 w-5 fill-current stroke-[2]" />
                     Falar com Vendedor no WhatsApp
