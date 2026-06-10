@@ -25,13 +25,13 @@ const MEUS_PRODUTOS = [
     badge: "Mais Vendido",
     description: "Um conjunto de talheres moderno e sofisticado, ideal para complementar sua mesa com elegância e praticidade. Fabricado com materiais de alta qualidade, possui acabamento refinado e cabos ergonômicos que proporcionam conforto durante o uso. Perfeito para refeições do dia a dia, encontros familiares e ocasiões especiais.",
     mediaType: "image",
-    mediaUrl: "public/talher1.webp",
+    mediaUrl: "/talher1.webp",
     additionalMedia: [
-      "public/talher1.webp",
-      "public/talher2.webp",
-      "public/talher3.webp",
-      "public/talher4.webp",
-      "public/talher5.webp"
+      "/talher1.webp",
+      "/talher2.webp",
+      "/talher3.webp",
+      "/talher4.webp",
+      "/talher5.webp"
     ],
     specifications: [
       { name: "Material", value: "Aço Inoxidável Premium" },
@@ -70,12 +70,12 @@ const MEUS_PRODUTOS = [
     badge: "Lançamento",
     description: "Transforme seus momentos de café em experiências especiais com este elegante conjunto de xícaras e pires na sofisticada cor Verde Tiffany. Produzido com material resistente e acabamento brilhante, o conjunto combina beleza, praticidade e durabilidade, sendo ideal para receber visitas, reuniões familiares ou para o uso diário.",
     mediaType: "image",
-    mediaUrl: "public/xicara1.webp",
+    mediaUrl: "/xicara1.webp",
     additionalMedia: [
-      "public/xicara1.webp",
-      "public/talher2.webp",
-      "public/talher3.webp",
-      "public/talher4.webp"
+      "/xicara1.webp",
+      "/xicara2.webp",
+      "/xicara3.webp",
+      "/xicara4.webp"
     ],
     specifications: [
       { name: "Material", value: "Cerâmica de Alta Qualidade" },
@@ -93,12 +93,12 @@ const MEUS_PRODUTOS = [
     badge: "Exclusivo",
     description: "A versatilidade que o seu guarda-roupa precisa. Transita facilmente entre o escritório e o happy hour. Produzida em sarja acetinada com elastano de alta recuperação, garantindo liberdade total de movimento sem deformar os joelhos ao longo do dia.",
     mediaType: "image",
-    mediaUrl: "public/shortf1.webp",
+    mediaUrl: "/shortf1.webp",
     additionalMedia: [
-      "public/shortf1.webp",
-      "public/shortf2.webp",
-      "public/shortf3.webp",
-      "public/shortf4.webp"
+      "/shortf1.webp",
+      "/shortf2.webp",
+      "/shortf3.webp",
+      "/shortf4.webp",
     ],
     specifications: [
       { name: "Tecido", value: "Sarja Peletizada Com Elastano" },
@@ -116,12 +116,12 @@ const MEUS_PRODUTOS = [
     badge: "Premium",
     description: "Desfrute de uma experiência sonora de alta qualidade com o Fone de Ouvido Bluetooth Pro Sound. Desenvolvido para oferecer conforto, praticidade e excelente desempenho, ele proporciona conexão rápida e estável com smartphones, tablets e notebooks.",
     mediaType: "image",
-    mediaUrl: "public/fone1.webp",
+    mediaUrl: "/fone1.webp",
     additionalMedia: [
-      "public/fone1.webp",
-      "public/fone2.webp",
-      "public/fone3.webp",
-      "public/fone4.webp"
+      "/fone1.webp",
+      "/fone2.webp",
+      "/fone3.webp",
+      "/fone4.webp"
     ],
     specifications: [
       { name: "Tipo", value: "Fone de Ouvido Bluetooth Sem Fio" },
