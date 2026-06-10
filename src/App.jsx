@@ -15,34 +15,29 @@ import {
   SlidersHorizontal 
 } from 'lucide-react';
 
-// ==========================================
-// CONFIGURAÇÃO DOS SEUS PRODUTOS
-// ==========================================
-// Você pode editar, adicionar ou remover produtos diretamente neste array de objetos.
-// Para usar fotos locais, basta colocar a foto dentro da pasta "public/assets/"
-// e referenciar o caminho relativo como: "/assets/sua-foto.jpg"
 const MEUS_PRODUTOS = [
   {
     id: 1,
-    name: "Relógio Stealth Chronograph",
-    category: "Acessórios",
-    price: 89.90,
-    oldPrice: 119.00,
+    name: "Conjunto de Talheres Premium 25 Peças Preto Elegance",
+    category: "Louças",
+    price: 25.90,
+    oldPrice: 31.90,
     badge: "Mais Vendido",
-    description: "Um relógio minimalista de alta precisão com caixa em titânio escovado, vidro de safira ultra resistente e pulseira de couro legítimo italiano. Desenhado para transitar entre o casual moderno e o clássico sofisticado.",
+    description: "Um conjunto de talheres moderno e sofisticado, ideal para complementar sua mesa com elegância e praticidade. Fabricado com materiais de alta qualidade, possui acabamento refinado e cabos ergonômicos que proporcionam conforto durante o uso. Perfeito para refeições do dia a dia, encontros familiares e ocasiões especiais.",
     mediaType: "image",
-    // Link de exemplo para visualização rápida, mude para seu arquivo local "/assets/relogio.jpg"
-    mediaUrl: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=1200",
+    mediaUrl: "src/assets/talher1.webp",
     additionalMedia: [
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&q=80&w=1200"
+      "src/assets/talher1.webp",
+      "src/assets/talher2.webp",
+      "src/assets/talher3.webp",
+      "src/assets/talher4.webp",
+      "src/assets/talher5.webp"
     ],
     specifications: [
-      { name: "Material da Caixa", value: "Titânio Escovado de Grau 2" },
-      { name: "Vidro", value: "Safira Sintética Antirreflexo" },
-      { name: "Movimento", value: "Quartz Suíço de 4 Rubis" },
-      { name: "Resistência", value: "5 ATM (50 metros)" }
+      { name: "Material", value: "Aço Inoxidável Premium" },
+      { name: "Cor", value: "Preto Fosco" },
+      { name: "Quantidade de Peças", value: "25 Peças" },
+      { name: "Acabamento", value: "Polido e Resistente à Corrosão" }
     ]
   },
   {
@@ -50,10 +45,9 @@ const MEUS_PRODUTOS = [
     name: "Headphone Pro Hifi ANC-90",
     category: "Áudio",
     price: 145.00,
-    badge: "Vídeo Demonstrativo",
+    badge: "Exclusivo",
     description: "Sinta cada nota com pureza total. Cancelamento de ruído ativo híbrido que isola o ambiente externo de forma inteligente, aliado a diafragmas de grafeno de 40mm para agudos nítidos e graves profundos.",
     mediaType: "image",
-    // Exemplo de vídeo leve de banco de vídeos para demonstração imediata
     mediaUrl: "https://iloft.fbitsstatic.net/img/p/headphone-anc-vintage-preto-95266/281977-1.jpg?w=520&h=520&v=202509250227&qs=ignore",
     additionalMedia: [
       "https://iloft.fbitsstatic.net/img/p/headphone-anc-vintage-preto-95266/281977-1.jpg?w=520&h=520&v=202509250227&qs=ignore",
@@ -69,71 +63,77 @@ const MEUS_PRODUTOS = [
   },
   {
     id: 3,
-    name: "Mochila Tech Impermeável",
-    category: "Viagem",
-    price: 49.00,
-    oldPrice: 499.00,
+    name: "Conjunto de Xícaras para Café com Pires Elegance Diverso – 12 Peças",
+    category: "Louças",
+    price: 27.00,
+    oldPrice: 30.00,
     badge: "Lançamento",
-    description: "Organização cirúrgica para os seus equipamentos. Desenvolvida em Nylon Balístico Cordura®, oferece segurança contra chuva forte, fechaduras zíper YKK com trava, compartimento flutuante para laptop e porta USB integrada.",
+    description: "Transforme seus momentos de café em experiências especiais com este elegante conjunto de xícaras e pires na sofisticada cor Verde Tiffany. Produzido com material resistente e acabamento brilhante, o conjunto combina beleza, praticidade e durabilidade, sendo ideal para receber visitas, reuniões familiares ou para o uso diário.",
     mediaType: "image",
-    mediaUrl: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=1200",
+    mediaUrl: "src/assets/xicara1.webp",
     additionalMedia: [
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&q=80&w=1200"
+      "src/assets/xicara1.webp",
+      "src/assets/xicara2.webp",
+      "src/assets/xicara3.webp",
+      "src/assets/xicara4.webp"
     ],
     specifications: [
-      { name: "Capacidade", value: "24 Litros expansível até 28L" },
-      { name: "Compatibilidade", value: "Notebooks de até 16.2 polegadas" },
-      { name: "Material Exterior", value: "Nylon Balístico Cordura® 1000D" },
-      { name: "Segurança", value: "Bolso secreto RFID safe integrado" }
+      { name: "Material", value: "Cerâmica de Alta Qualidade" },
+      { name: "Cor", value: "Diverso" },
+      { name: "Quantidade de Peças", value: "12 Peças" },
+      { name: "Acabamento", value: "Brilhante e Uniforme" }
     ]
   },
   {
     id: 4,
-    name: "Luminária Modular Eclipse",
-    category: "Home Office",
+    name: "Calça Chino Slim Fit Flex",
+    category: "Roupas",
     price: 38.90,
+    oldPrice: 49.00,
     badge: "Exclusivo",
-    description: "Transforme a atmosfera de trabalho ou descanso. Luminária de mesa magnética que levita suavemente e ajusta a temperatura de cor ao toque físico ou pelo aplicativo nativo.",
+    description: "A versatilidade que o seu guarda-roupa precisa. Transita facilmente entre o escritório e o happy hour. Produzida em sarja acetinada com elastano de alta recuperação, garantindo liberdade total de movimento sem deformar os joelhos ao longo do dia.",
     mediaType: "image",
-    mediaUrl: "https://m.media-amazon.com/images/I/41r0fg2-DEL.jpg",
+    mediaUrl: "src/assets/shortf1.webp",
     additionalMedia: [
-      "https://m.media-amazon.com/images/I/41r0fg2-DEL.jpg",
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1565814636199-ae8133055c1c?auto=format&fit=crop&q=80&w=1200"
+      "src/assets/shortf1.webp",
+      "src/assets/shortf2.webp",
+      "src/assets/shortf3.webp",
+      "src/assets/shortf4.webp"
     ],
     specifications: [
-      { name: "Iluminação", value: "LED RGB+CCT dimerizável" },
-      { name: "Fluxo Luminoso", value: "850 Lúmens ajustáveis" },
-      { name: "Carregamento", value: "Indução Qi 15W integrada na base" },
-      { name: "Controle", value: "Touch na base ou assistentes virtuais" }
+      { name: "Tecido", value: "Sarja Peletizada Com Elastano" },
+      { name: "Composição", value: "98% Algodão / 2% Elastano Lycra" },
+      { name: "Bolsos", value: "2 Frontais tipo faca / 2 Traseiros embutidos" },
+      { name: "Modelagem", value: "Slim Ajustada (Moderna)" }
     ]
   },
   {
     id: 5,
-    name: "Teclado Mecânico Alumínio Gasket",
+    name: "Fone de Ouvido Bluetooth Pro Sound Preto – Sem Fio",
     category: "Acessórios",
     price: 98.00,
-    oldPrice: 1100.00,
+    oldPrice: 110.00,
     badge: "Premium",
-    description: "Construído em bloco maciço de alumínio anodizado CNC com montagem tipo Gasket Mount, garantindo o perfil acústico mais refinado e suave do mercado mecânico.",
+    description: "Desfrute de uma experiência sonora de alta qualidade com o Fone de Ouvido Bluetooth Pro Sound. Desenvolvido para oferecer conforto, praticidade e excelente desempenho, ele proporciona conexão rápida e estável com smartphones, tablets e notebooks.",
     mediaType: "image",
-    mediaUrl: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&q=80&w=1200",
+    mediaUrl: "src/assets/fone1.webp",
     additionalMedia: [
-      "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&q=80&w=1200"
+      "src/assets/fone1.webp",
+      "src/assets/fone2.webp",
+      "src/assets/fone3.webp",
+      "src/assets/fone4.webp"
     ],
     specifications: [
-      { name: "Layout", value: "Compacto 75% ANSI" },
-      { name: "Switches", value: "Linear Premium pré-lubrificados de fábrica" },
-      { name: "Conexão", value: "Dongle 2.4Ghz, Bluetooth 5.1 e Cabo Tipo-C" },
-      { name: "Bateria", value: "4000mAh recarregável de longa duração" }
+      { name: "Tipo", value: "Fone de Ouvido Bluetooth Sem Fio" },
+      { name: "Cor", value: "Preto" },
+      { name: "Alcance Sem Fio", value: "Até 10 metros" },
+      { name: "Tempo de Reprodução", value: "Até 6 horas contínuas" }
     ]
   }
 ];
 
 export default function App() {
-  const WHATSAPP_NUMERO = "5591992209101"; // <-- Substitua pelo seu número com DDD (ex: 5591999999999)
+  const WHATSAPP_NUMERO = "5591992209101"; 
   
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Todos');
@@ -141,13 +141,11 @@ export default function App() {
   const [activeMediaIndex, setActiveMediaIndex] = useState(0);
   const [videoMuted, setVideoMuted] = useState(true);
 
-  // Categorias Dinâmicas
   const categories = useMemo(() => {
     const list = new Set(MEUS_PRODUTOS.map(p => p.category));
     return ['Todos', ...Array.from(list)];
   }, []);
 
-  // Filtragem inteligente de produtos
   const filteredProducts = useMemo(() => {
     return MEUS_PRODUTOS.filter(product => {
       const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -157,7 +155,6 @@ export default function App() {
     });
   }, [searchTerm, selectedCategory]);
 
-  // Gerador de link do WhatsApp para vendas
   const handleWhatsAppLink = (product, isCustomMessage = false, customText = '') => {
     const baseMessage = `Olá! Vi o produto *${product.name}* na vitrine virtual e gostaria de mais informações sobre a compra.`;
     const textToSend = isCustomMessage ? customText : baseMessage;
@@ -165,7 +162,6 @@ export default function App() {
     window.open(url, '_blank');
   };
 
-  // Abrir detalhes do produto
   const handleOpenDetails = (product) => {
     setSelectedProduct(product);
     setActiveMediaIndex(0);
@@ -173,55 +169,55 @@ export default function App() {
   };
 
   return (
-    <div className="min-height-screen bg-[#0f1115] text-[#e4e6eb] font-sans antialiased selection:bg-emerald-500 selection:text-black">
+    <div className="min-h-screen bg-[#eaeded] text-neutral-800 font-sans antialiased selection:bg-amber-500 selection:text-white">
       
       {/* HEADER / NAV */}
-      <nav className="sticky top-0 z-40 backdrop-blur-md bg-[#0f1115]/85 border-b border-white/5 px-6 py-4 transition-all">
+      <nav className="sticky top-0 z-40 bg-[#131921] px-6 py-4 transition-all shadow-md">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 items-center justify-between">
           
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 bg-gradient-to-tr from-emerald-500 to-teal-400 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/10">
-              <ShoppingBag className="h-5 w-5 text-[#0f1115] stroke-[2.5]" />
+            <div className="h-10 w-10 bg-amber-500 rounded-xl flex items-center justify-center shadow-md">
+              <ShoppingBag className="h-5 w-5 text-[#131921] stroke-[2.5]" />
             </div>
             <div>
-              <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent">
+              <span className="font-bold text-xl tracking-tight text-white">
                 VITRINE
               </span>
-              <p className="text-[10px] text-emerald-400 font-mono tracking-widest uppercase">e-commerce</p>
+              <p className="text-[10px] text-amber-500 font-mono tracking-widest uppercase font-bold">Amazon Style</p>
             </div>
           </div>
 
           {/* Barra de Busca */}
-          <div className="relative w-full md:max-w-md">
-            <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-500">
+          <div className="relative w-full md:max-w-xl">
+            <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-400">
               <Search className="h-4 w-4" />
             </span>
             <input
               type="text"
-              placeholder="O que você está procurando hoje?"
+              placeholder="Pesquisar na Vitrine..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-neutral-900/60 border border-white/5 rounded-full text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/40 focus:border-emerald-500/50 focus:bg-neutral-900 transition-all"
+              className="w-full pl-10 pr-12 py-2.5 bg-white border border-transparent rounded-lg text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all shadow-sm"
             />
             {searchTerm && (
               <button 
                 onClick={() => setSearchTerm('')} 
-                className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-neutral-400 hover:text-white transition-colors"
+                className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-neutral-400 hover:text-neutral-600 transition-colors"
               >
                 <X className="h-4 w-4" />
               </button>
             )}
           </div>
 
-          {/* Botão de contato rápido no header */}
+          {/* Botão de contato rápido */}
           <a
             href={`https://wa.me/${WHATSAPP_NUMERO}?text=Ol%C3%A1!%20Gostaria%20de%20ver%20o%20cat%C3%A1logo%20de%20produtos.`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:border-emerald-500/30 hover:bg-emerald-500/5 text-xs font-semibold text-neutral-300 hover:text-emerald-400 transition-all duration-300"
+            className="hidden lg:flex items-center gap-2 px-5 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-neutral-900 text-xs font-bold transition-all shadow-sm"
           >
-            <MessageCircle className="h-3.5 w-3.5" />
+            <MessageCircle className="h-4 w-4" />
             Falar com Vendedor
           </a>
 
@@ -229,40 +225,33 @@ export default function App() {
       </nav>
 
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden pt-12 pb-8 px-6">
-        {/* Glow ambient background decorativo */}
-        <div className="absolute top-[-20%] left-[50%] -translate-x-[50%] w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute top-[10%] right-[10%] w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
-
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#131921] to-[#eaeded] pt-8 pb-10 px-6">
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-semibold text-emerald-400 mb-6 font-mono">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-amber-500/10 border border-amber-500/20 text-xs font-bold text-amber-600 mb-4 font-mono">
             <Sparkles className="h-3.5 w-3.5 animate-pulse" />
-            FRETE GRÁTIS EM COMPRAS SELECIONADAS
+            ENTREGAS A PARTIR DE R$ 50,00
           </div>
-          <h1 className="text-4xl md:text-6xl font-black tracking-tight text-white mb-6 leading-[1.1]">
-            Experiência Premium,<br />
-            <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-blue-500 bg-clip-text text-transparent">
-              Direto na Sua Casa.
-            </span>
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
+            Ofertas Imperdíveis Escolhidas para Você
           </h1>
-          <p className="max-w-2xl mx-auto text-neutral-400 text-base md:text-lg leading-relaxed mb-8">
-            Navegue por nossa linha selecionada de produtos de alta tecnologia e estilo. Assista a vídeos reais, analise detalhes e compre direto com atendimento exclusivo via WhatsApp.
+          <p className="max-w-2xl mx-auto text-neutral-300 text-sm md:text-base mb-6">
+            Explore nossa vitrine premium com atendimento humanizado. Analise mídias reais, compare especificações técnicas e faça seu pedido via WhatsApp.
           </p>
 
           {/* Categorias / Filtros Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mt-4 max-w-3xl mx-auto">
-            <div className="flex items-center gap-2 mr-2 px-3 py-1.5 text-neutral-500 text-xs font-bold uppercase tracking-wider font-mono">
-              <SlidersHorizontal className="h-3.5 w-3.5" />
-              Categorias:
+          <div className="flex flex-wrap items-center justify-center gap-2 max-w-3xl mx-auto bg-white/5 p-3 rounded-xl backdrop-blur-sm border border-white/10">
+            <div className="flex items-center gap-2 mr-2 px-2 py-1 text-neutral-100 text-xs font-bold uppercase tracking-wider font-mono">
+              <SlidersHorizontal className="h-3.5 w-3.5 text-amber-500" />
+              Filtrar:
             </div>
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-300 ${
+                className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all duration-200 ${
                   selectedCategory === cat
-                    ? 'bg-gradient-to-r from-emerald-500 to-teal-400 text-neutral-950 font-bold shadow-lg shadow-emerald-500/20 scale-105'
-                    : 'bg-neutral-900 border border-white/5 text-neutral-400 hover:text-white hover:bg-neutral-800'
+                    ? 'bg-amber-500 text-neutral-950 shadow-md scale-105'
+                    : 'bg-white hover:bg-neutral-100 text-neutral-700 shadow-sm'
                 }`}
               >
                 {cat}
@@ -273,50 +262,49 @@ export default function App() {
       </section>
 
       {/* PRODUTOS GRID */}
-      <main className="max-w-7xl mx-auto px-6 py-12 relative z-10">
+      <main className="max-w-7xl mx-auto px-6 py-8 relative z-10">
         
         {filteredProducts.length === 0 ? (
-          <div className="text-center py-20 bg-neutral-900/30 border border-white/5 rounded-3xl">
-            <Search className="h-12 w-12 text-neutral-600 mx-auto mb-4" />
-            <p className="text-lg text-neutral-400 font-semibold mb-2">Nenhum produto encontrado</p>
-            <p className="text-sm text-neutral-500 max-w-sm mx-auto">Tente alterar o filtro de categoria ou redefinir sua busca digitando outro termo.</p>
+          <div className="text-center py-20 bg-white border border-neutral-200 rounded-2xl shadow-sm">
+            <Search className="h-12 w-12 text-neutral-300 mx-auto mb-4" />
+            <p className="text-lg text-neutral-700 font-bold mb-2">Nenhum produto encontrado</p>
+            <p className="text-sm text-neutral-500 max-w-sm mx-auto mb-6">Tente alterar o filtro de categoria ou redefinir sua busca digitando outro termo.</p>
             <button 
               onClick={() => { setSearchTerm(''); setSelectedCategory('Todos'); }}
-              className="mt-6 px-5 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-xs font-bold rounded-full transition-colors"
+              className="px-5 py-2 bg-neutral-800 hover:bg-neutral-900 text-white text-xs font-bold rounded-lg transition-colors shadow-sm"
             >
               Resetar Filtros
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProducts.map((product) => (
               <div 
                 key={product.id}
                 onClick={() => handleOpenDetails(product)}
-                className="group cursor-pointer bg-neutral-900/40 border border-white/5 rounded-3xl overflow-hidden hover:border-white/10 hover:bg-neutral-900/80 transition-all duration-300 flex flex-col justify-between"
+                className="group cursor-pointer bg-white border border-neutral-200/80 rounded-xl overflow-hidden hover:shadow-xl hover:border-neutral-300 transition-all duration-300 flex flex-col justify-between shadow-sm"
               >
                 {/* Media Container */}
-                <div className="relative aspect-video w-full overflow-hidden bg-neutral-950">
+                <div className="relative aspect-square w-full p-4 bg-neutral-50 flex items-center justify-center border-b border-neutral-100">
                   {/* Badge */}
                   {product.badge && (
-                    <span className="absolute top-4 left-4 z-20 bg-[#0f1115]/90 backdrop-blur-md text-emerald-400 border border-emerald-500/30 text-[10px] font-bold font-mono tracking-wider uppercase px-2.5 py-1 rounded-full">
+                    <span className="absolute top-3 left-3 z-20 bg-[#cc0c39] text-white text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-sm shadow-sm">
                       {product.badge}
                     </span>
                   )}
 
                   {/* Render Mídia Inicial */}
                   {product.mediaType === "video" ? (
-                    <div className="relative w-full h-full">
+                    <div className="relative w-full h-full flex items-center justify-center">
                       <video
                         src={product.mediaUrl}
                         muted
                         autoPlay
                         loop
                         playsInline
-                        className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                        className="max-h-full max-w-full object-contain group-hover:scale-102 transition-transform duration-500"
                       />
-                      
-                      <span className="absolute bottom-4 right-4 z-10 h-7 w-7 bg-[#0f1115]/80 rounded-full flex items-center justify-center text-white border border-white/10 shadow-lg">
+                      <span className="absolute bottom-3 right-3 z-10 h-8 w-8 bg-black/70 rounded-full flex items-center justify-center text-white shadow-md">
                         <Play className="h-3 w-3 fill-current ml-0.5" />
                       </span>
                     </div>
@@ -324,67 +312,66 @@ export default function App() {
                     <img 
                       src={product.mediaUrl} 
                       alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      className="max-h-full max-w-full object-contain group-hover:scale-102 transition-transform duration-500"
                     />
                   )}
-
-                  
-                  {/* Gradiente de overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-60 pointer-events-none" />
                 </div>
 
                 {/* Conteúdo do Card */}
-                <div className="p-6 flex-grow flex flex-col justify-between">
+                <div className="p-5 flex-grow flex flex-col justify-between bg-white">
                   <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-[11px] font-bold font-mono tracking-widest text-neutral-500 uppercase">
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-[11px] font-bold text-neutral-400 uppercase tracking-wide">
                         {product.category}
                       </span>
-                      <div className="flex items-center gap-1.5 text-xs text-neutral-400">
+                      <div className="flex items-center gap-1 text-[11px] text-emerald-600 font-medium">
                         <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                        Disponível
+                        Em estoque
                       </div>
                     </div>
                     
-                    <h2 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-200 line-clamp-1">
+                    <h2 className="text-base font-bold text-neutral-800 group-hover:text-amber-600 transition-colors duration-200 line-clamp-2 min-h-[3rem]">
                       {product.name}
                     </h2>
-                    <p className="text-neutral-400 text-xs leading-relaxed mt-2.5 mb-5 line-clamp-2">
+                    <p className="text-neutral-500 text-xs leading-relaxed mt-1 mb-4 line-clamp-2">
                       {product.description}
                     </p>
                   </div>
 
                   <div>
                     {/* Linha de Preço */}
-                    <div className="flex items-baseline gap-2.5 mb-5">
-                      <span className="text-2xl font-black text-white font-mono">
-                        {product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+                    <div className="flex items-baseline gap-1.5 mb-4">
+                      <span className="text-sm font-medium text-neutral-700">R$</span>
+                      <span className="text-2xl font-bold text-neutral-900 tracking-tight">
+                        {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[0]}
+                      </span>
+                      <span className="text-sm font-bold text-neutral-900">
+                        ,{product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[1]}
                       </span>
                       {product.oldPrice && (
-                        <span className="text-xs text-neutral-500 line-through font-mono">
+                        <span className="text-xs text-neutral-400 line-through ml-2">
                           {product.oldPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                         </span>
                       )}
                     </div>
 
-                    {/* Botão de Chamada */}
+                    {/* Botões */}
                     <div className="flex items-center gap-2">
                       <button 
                         onClick={(e) => {
                           e.stopPropagation();
                           handleWhatsAppLink(product);
                         }}
-                        className="flex-1 bg-emerald-500 hover:bg-emerald-400 text-[#0f1115] py-3 rounded-2xl text-xs font-bold transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-lg shadow-emerald-500/10 hover:shadow-emerald-500/25"
+                        className="flex-1 bg-amber-400 hover:bg-amber-500 text-neutral-900 py-2.5 rounded-lg text-xs font-bold transition-all active:scale-[0.98] shadow-sm"
                       >
-                        <MessageCircle className="h-4 w-4 fill-current stroke-[2]" />
-                        Comprar agora
+                        Falar com vendedor
                       </button>
                       <button 
                         onClick={(e) => {
                           e.stopPropagation();
                           handleOpenDetails(product);
                         }}
-                        className="p-3 bg-neutral-800 hover:bg-neutral-700 text-white rounded-2xl transition-colors active:scale-95 border border-white/5"
+                        className="p-2.5 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-lg transition-colors border border-neutral-300 shadow-sm"
                         title="Ver detalhes do produto"
                       >
                         <ArrowUpRight className="h-4 w-4" />
@@ -399,28 +386,27 @@ export default function App() {
         )}
       </main>
 
-      {/* DETALHES MODAL (Abre quando clica no card ou no botão de lupa) */}
-      {/* DETALHES MODAL CORRIGIDO PARA CELULAR */}
+      {/* DETALHES MODAL */}
       {selectedProduct && (
-        <div className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-4 bg-black/85 backdrop-blur-md overflow-y-auto">
-          <div className="relative w-full max-w-5xl bg-[#14171d] border border-white/10 rounded-[32px] shadow-2xl overflow-hidden my-auto mb-12 lg:mb-8">
+        <div className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-4 bg-black/60 backdrop-blur-sm overflow-y-auto">
+          <div className="relative w-full max-w-5xl bg-white rounded-xl shadow-2xl overflow-hidden my-auto mb-12 lg:mb-8 border border-neutral-200">
             
             {/* Fechar Modal */}
             <button 
               onClick={() => setSelectedProduct(null)}
-              className="absolute top-6 right-6 z-30 p-2.5 bg-neutral-900/80 hover:bg-neutral-800 text-neutral-400 hover:text-white rounded-full border border-white/5 transition-colors focus:outline-none"
+              className="absolute top-4 right-4 z-30 p-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-500 hover:text-neutral-800 rounded-full border border-neutral-200 transition-colors shadow-sm focus:outline-none"
             >
-              <X className="h-5 w-5" />
+              <X className="h-4 w-4" />
             </button>
 
             {/* Layout em Duas Colunas */}
             <div className="grid grid-cols-1 lg:grid-cols-12">
               
-              {/* Coluna 1: Mídias do Produto (Lado Esquerdo) */}
-              <div className="lg:col-span-7 bg-neutral-950 p-6 flex flex-col justify-between min-h-[350px] sm:min-h-[400px] lg:min-h-[550px]">
+              {/* Coluna 1: Mídias do Produto (Lado Esquerdo Claro) */}
+              <div className="lg:col-span-7 bg-neutral-50 p-6 flex flex-col justify-between min-h-[350px] sm:min-h-[400px] lg:min-h-[550px] border-r border-neutral-100">
                 
                 {/* Visualizador Principal */}
-                <div className="relative flex-grow flex items-center justify-center rounded-2xl overflow-hidden border border-white/5">
+                <div className="relative flex-grow flex items-center justify-center rounded-xl overflow-hidden bg-white border border-neutral-200/60 p-4 shadow-inner">
                   {selectedProduct.mediaType === 'video' && activeMediaIndex === 0 ? (
                     <div className="relative w-full h-full aspect-video flex items-center justify-center">
                       <video 
@@ -430,11 +416,11 @@ export default function App() {
                         autoPlay
                         loop
                         playsInline
-                        className="w-full h-full object-contain max-h-[420px]"
+                        className="max-h-[380px] object-contain"
                       />
                       <button 
                         onClick={() => setVideoMuted(!videoMuted)}
-                        className="absolute bottom-4 right-4 p-2 bg-black/60 hover:bg-black/85 text-white rounded-full border border-white/10 transition-colors"
+                        className="absolute bottom-3 right-3 p-2 bg-black/70 hover:bg-black/85 text-white rounded-full transition-colors shadow-md"
                       >
                         {videoMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
                       </button>
@@ -447,23 +433,23 @@ export default function App() {
                           : selectedProduct.mediaUrl
                       } 
                       alt={selectedProduct.name}
-                      className="w-full h-full object-contain max-h-[300px] lg:max-h-[420px] rounded-xl"
+                      className="max-h-[300px] lg:max-h-[380px] object-contain rounded-lg"
                     />
                   )}
                 </div>
 
                 {/* Carrossel de Miniaturas */}
                 {selectedProduct.additionalMedia && selectedProduct.additionalMedia.length > 1 && (
-                  <div className="flex gap-3 mt-4 overflow-x-auto pb-2 justify-centerECE">
+                  <div className="flex gap-2.5 mt-4 overflow-x-auto pb-1 justify-center">
                     {selectedProduct.mediaType === 'video' && (
                       <button 
                         onClick={() => setActiveMediaIndex(0)}
-                        className={`relative h-14 w-20 rounded-lg overflow-hidden flex-shrink-0 border-2 transition-all ${
-                          activeMediaIndex === 0 ? 'border-emerald-500 scale-105' : 'border-transparent opacity-60'
+                        className={`relative h-14 w-16 rounded-md overflow-hidden flex-shrink-0 border-2 transition-all ${
+                          activeMediaIndex === 0 ? 'border-amber-500 scale-105 shadow-sm' : 'border-neutral-200 opacity-70'
                         }`}
                       >
-                        <div className="absolute inset-0 bg-neutral-900 flex items-center justify-center">
-                          <Play className="h-4 w-4 text-white fill-white" />
+                        <div className="absolute inset-0 bg-neutral-100 flex items-center justify-center">
+                          <Play className="h-4 w-4 text-neutral-800 fill-neutral-800" />
                         </div>
                       </button>
                     )}
@@ -474,8 +460,8 @@ export default function App() {
                         <button
                           key={index}
                           onClick={() => setActiveMediaIndex(itemIndex)}
-                          className={`h-14 w-20 rounded-lg overflow-hidden flex-shrink-0 border-2 transition-all ${
-                            activeMediaIndex === itemIndex ? 'border-emerald-500 scale-105' : 'border-transparent opacity-60'
+                          className={`h-14 w-16 rounded-md overflow-hidden flex-shrink-0 border-2 transition-all ${
+                            activeMediaIndex === itemIndex ? 'border-amber-500 scale-105 shadow-sm' : 'border-neutral-200 opacity-70'
                           }`}
                         >
                           <img src={media} alt="Miniatura" className="h-full w-full object-cover" />
@@ -486,39 +472,40 @@ export default function App() {
                 )}
               </div>
 
-              {/* Coluna 2: Informações e Atendimento (Lado Direito) */}
-              <div className="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between bg-[#14171d]">
+              {/* Coluna 2: Informações (Lado Direito Moderno) */}
+              <div className="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between bg-white">
                 <div>
-                  <span className="text-xs font-bold font-mono tracking-widest text-emerald-400 uppercase bg-emerald-500/10 px-3 py-1 rounded-full">
+                  <span className="text-[10px] font-bold tracking-wider text-amber-700 uppercase bg-amber-500/10 px-2.5 py-1 rounded">
                     {selectedProduct.category}
                   </span>
 
-                  <h1 className="text-2xl sm:text-3xl font-black text-white mt-4 mb-2">
+                  <h1 className="text-xl sm:text-2xl font-bold text-neutral-900 mt-3 mb-2 leading-tight">
                     {selectedProduct.name}
                   </h1>
 
-                  <div className="flex items-baseline gap-3 mb-6">
-                    <span className="text-2xl sm:text-3xl font-mono font-black text-white">
+                  <div className="flex items-baseline gap-2 mb-4 border-b border-neutral-100 pb-4">
+                    <span className="text-xs text-neutral-600 mr-1">Preço:</span>
+                    <span className="text-2xl font-bold text-[#b12704]">
                       {selectedProduct.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                     </span>
                     {selectedProduct.oldPrice && (
-                      <span className="text-xs sm:text-sm text-neutral-500 line-through font-mono">
+                      <span className="text-xs text-neutral-400 line-through ml-2">
                         {selectedProduct.oldPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                       </span>
                     )}
                   </div>
 
-                  <p className="text-neutral-300 text-xs sm:text-sm leading-relaxed mb-6">
+                  <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed mb-5">
                     {selectedProduct.description}
                   </p>
 
-                  <div className="mb-6">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-3 font-mono">Especificações Técnicas</h3>
-                    <div className="space-y-2 bg-neutral-950/40 p-4 rounded-2xl border border-white/5 text-xs">
+                  <div className="mb-5">
+                    <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2 font-mono">Especificações Técnicas</h3>
+                    <div className="space-y-1.5 bg-neutral-50 p-3.5 rounded-lg border border-neutral-200 text-xs">
                       {selectedProduct.specifications ? selectedProduct.specifications.map((spec, i) => (
-                        <div key={i} className="flex justify-between border-b border-white/5 pb-2 last:border-b-0 last:pb-0">
+                        <div key={i} className="flex justify-between border-b border-neutral-200/60 pb-1.5 last:border-b-0 last:pb-0">
                           <span className="text-neutral-500">{spec.name}</span>
-                          <span className="text-white font-medium">{spec.value}</span>
+                          <span className="text-neutral-800 font-semibold">{spec.value}</span>
                         </div>
                       )) : (
                         <p className="text-neutral-500">Sob consulta com vendedor.</p>
@@ -527,23 +514,23 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Área de Ação & Mensagem Personalizável */}
-                <div className="mt-4 border-t border-white/5 pt-4">
-                  <div className="bg-emerald-500/5 rounded-2xl p-4 border border-emerald-500/10 mb-4 flex gap-3.5 items-start">
-                    <div className="p-2 bg-emerald-500/10 text-emerald-400 rounded-lg hidden sm:block">
-                      <MessageCircle className="h-5 w-5 fill-current" />
+                {/* Área de Ação WhatsApp */}
+                <div className="border-t border-neutral-100 pt-4">
+                  <div className="bg-emerald-50 rounded-xl p-3.5 border border-emerald-200 mb-4 flex gap-3 items-start">
+                    <div className="p-2 bg-emerald-500 text-white rounded-lg hidden sm:block">
+                      <MessageCircle className="h-4 w-4 fill-current" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-emerald-400 uppercase tracking-wide font-mono">Compra Assistida</h4>
-                      <p className="text-[11px] text-neutral-400 leading-normal mt-1">Ao clicar, você iniciará uma conversa no WhatsApp com o vendedor para combinar o pagamento e entrega.</p>
+                      <h4 className="text-xs font-bold text-emerald-800 uppercase tracking-wide">Compra Garantida</h4>
+                      <p className="text-[11px] text-emerald-700 leading-normal mt-0.5">Clique no botão abaixo para alinhar os detalhes da entrega direto com o vendedor especialista.</p>
                     </div>
                   </div>
 
                   <button
                     onClick={() => handleWhatsAppLink(selectedProduct)}
-                    className="w-full bg-gradient-to-r from-emerald-500 to-teal-400 text-neutral-950 py-4 rounded-2xl font-bold hover:shadow-xl hover:shadow-emerald-500/15 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer text-xs sm:text-sm"
+                    className="w-full bg-[#f0c14b] hover:bg-[#e7b43b] text-neutral-900 border border-[#a88734] py-3.5 rounded-lg font-bold transition-all flex items-center justify-center gap-2 cursor-pointer text-xs sm:text-sm shadow-sm active:scale-[0.99]"
                   >
-                    <MessageCircle className="h-5 w-5 fill-current stroke-[2]" />
+                    <MessageCircle className="h-4 w-4 fill-current stroke-[2]" />
                     Falar com Vendedor no WhatsApp
                   </button>
                 </div>
@@ -556,13 +543,13 @@ export default function App() {
       )}
 
       {/* FOOTER */}
-      <footer className="border-t border-white/5 bg-[#0a0c0f] py-12 px-6 text-center text-xs text-neutral-500">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <footer className="border-t border-neutral-200 bg-[#131921] py-10 px-6 text-center text-xs text-neutral-400">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-mono">© 2026 VITRINE. Todos os direitos reservados. Desenvolvido por Cleisson Silva</p>
           <div className="flex gap-4">
-            <a href={`https://wa.me/${WHATSAPP_NUMERO}`} className="hover:text-emerald-400 transition-colors">Termos de Compra</a>
-            <span className="text-neutral-800">|</span>
-            <a href={`https://wa.me/${WHATSAPP_NUMERO}`} className="hover:text-emerald-400 transition-colors font-semibold">Suporte WhatsApp</a>
+            <a href={`https://wa.me/${WHATSAPP_NUMERO}`} className="hover:text-amber-500 transition-colors">Termos de Compra</a>
+            <span className="text-neutral-600">|</span>
+            <a href={`https://wa.me/${WHATSAPP_NUMERO}`} className="hover:text-amber-500 transition-colors font-semibold">Suporte</a>
           </div>
         </div>
       </footer>
