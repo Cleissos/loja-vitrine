@@ -148,7 +148,7 @@ export default function App() {
 
   const filteredProducts = useMemo(() => {
     return MEUS_PRODUTOS.filter(product => {
-      const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      const matchesSearch = product.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                             product.description.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'Todos' || product.category === selectedCategory;
       return matchesSearch && matchesCategory;
