@@ -262,7 +262,8 @@ export default function App() {
       </section>
 
       {/* PRODUTOS GRID */}
-      <main className="max-w-7xl mx-auto px-6 py-8 relative z-10">
+      {/* PRODUTOS GRID */}
+      <main className="max-w-7xl mx-auto px-2 sm:px-6 py-4 sm:py-8 relative z-10">
         
         {filteredProducts.length === 0 ? (
           <div className="text-center py-20 bg-white border border-neutral-200 rounded-2xl shadow-sm">
@@ -277,18 +278,19 @@ export default function App() {
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          /* 🌟 MUDANÇA AQUI: grid-cols-2 no mobile (2 cards por linha) com espaçamento menor (gap-2) */
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6">
             {filteredProducts.map((product) => (
               <div 
                 key={product.id}
                 onClick={() => handleOpenDetails(product)}
-                className="group cursor-pointer bg-white border border-neutral-200/80 rounded-xl overflow-hidden hover:shadow-xl hover:border-neutral-300 transition-all duration-300 flex flex-col justify-between shadow-sm"
+                className="group cursor-pointer bg-white border border-neutral-200/60 rounded-lg overflow-hidden hover:shadow-xl hover:border-neutral-300 transition-all duration-300 flex flex-col justify-between shadow-sm"
               >
                 {/* Media Container */}
-                <div className="relative aspect-square w-full p-4 bg-neutral-50 flex items-center justify-center border-b border-neutral-100">
+                <div className="relative aspect-square w-full p-2 sm:p-4 bg-neutral-50 flex items-center justify-center border-b border-neutral-100">
                   {/* Badge */}
                   {product.badge && (
-                    <span className="absolute top-3 left-3 z-20 bg-[#cc0c39] text-white text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-sm shadow-sm">
+                    <span className="absolute top-1.5 left-1.5 z-20 bg-[#cc0c39] text-white text-[8px] sm:text-[10px] font-bold tracking-wider uppercase px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-sm shadow-sm">
                       {product.badge}
                     </span>
                   )}
@@ -304,8 +306,8 @@ export default function App() {
                         playsInline
                         className="max-h-full max-w-full object-contain group-hover:scale-102 transition-transform duration-500"
                       />
-                      <span className="absolute bottom-3 right-3 z-10 h-8 w-8 bg-black/70 rounded-full flex items-center justify-center text-white shadow-md">
-                        <Play className="h-3 w-3 fill-current ml-0.5" />
+                      <span className="absolute bottom-2 right-2 z-10 h-6 w-6 sm:h-8 sm:w-8 bg-black/70 rounded-full flex items-center justify-center text-white shadow-md">
+                        <Play className="h-2.5 w-2.5 sm:h-3 sm:w-3 fill-current ml-0.5" />
                       </span>
                     </div>
                   ) : (
@@ -318,63 +320,48 @@ export default function App() {
                 </div>
 
                 {/* Conteúdo do Card */}
-                <div className="p-5 flex-grow flex flex-col justify-between bg-white">
+                <div className="p-3 sm:p-5 flex-grow flex flex-col justify-between bg-white">
                   <div>
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-[11px] font-bold text-neutral-400 uppercase tracking-wide">
+                    {/* Categoria escondida ou menor no mobile para focar no design limpo da imagem */}
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-[9px] sm:text-[11px] font-bold text-neutral-400 uppercase tracking-wide">
                         {product.category}
                       </span>
-                      <div className="flex items-center gap-1 text-[11px] text-emerald-600 font-medium">
-                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                        Em estoque
-                      </div>
                     </div>
                     
-                    <h2 className="text-base font-bold text-neutral-800 group-hover:text-amber-600 transition-colors duration-200 line-clamp-2 min-h-[3rem]">
+                    {/* Título com texto menor no mobile (text-sm) e limite estrito de 2 linhas */}
+                    <h2 className="text-xs sm:text-base font-medium sm:font-bold text-neutral-800 group-hover:text-amber-600 transition-colors duration-200 line-clamp-2 min-h-[2rem] sm:min-h-[3rem] leading-tight">
                       {product.name}
                     </h2>
-                    <p className="text-neutral-500 text-xs leading-relaxed mt-1 mb-4 line-clamp-2">
-                      {product.description}
-                    </p>
                   </div>
 
-                  <div>
-                    {/* Linha de Preço */}
-                    <div className="flex items-baseline gap-1.5 mb-4">
-                      <span className="text-sm font-medium text-neutral-700">R$</span>
-                      <span className="text-2xl font-bold text-neutral-900 tracking-tight">
+                  <div className="mt-2">
+                    {/* 🌟 Preço idêntico à imagem: R$ pequeno, centavos suspensos e colados */}
+                    <div className="flex items-start gap-0.5 mb-2.5">
+                      <span className="text-[10px] sm:text-sm font-normal text-neutral-900 pt-0.5">R$</span>
+                      <span className="text-lg sm:text-2xl font-bold text-neutral-900 tracking-tight leading-none">
                         {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[0]}
                       </span>
-                      <span className="text-sm font-bold text-neutral-900">
-                        ,{product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[1]}
+                      <span className="text-[10px] sm:text-sm font-bold text-neutral-900 leading-none pt-0.5">
+                        {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[1]}
                       </span>
                       {product.oldPrice && (
-                        <span className="text-xs text-neutral-400 line-through ml-2">
+                        <span className="text-[9px] sm:text-xs text-neutral-400 line-through ml-1.5 self-center">
                           {product.oldPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                         </span>
                       )}
                     </div>
 
-                    {/* Botões */}
-                    <div className="flex items-center gap-2">
+                    {/* Botões ajustados para mobile: O "Ver detalhes" some ou encolhe, priorizando o clique do Card */}
+                    <div className="flex items-center gap-1.5">
                       <button 
                         onClick={(e) => {
                           e.stopPropagation();
                           handleWhatsAppLink(product);
                         }}
-                        className="flex-1 bg-amber-400 hover:bg-amber-500 text-neutral-900 py-2.5 rounded-lg text-xs font-bold transition-all active:scale-[0.98] shadow-sm"
+                        className="flex-1 bg-amber-400 hover:bg-amber-500 text-neutral-900 py-2 sm:py-2.5 rounded-md text-[10px] sm:text-xs font-bold transition-all active:scale-[0.98] shadow-sm"
                       >
-                        Falar com vendedor
-                      </button>
-                      <button 
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleOpenDetails(product);
-                        }}
-                        className="p-2.5 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-lg transition-colors border border-neutral-300 shadow-sm"
-                        title="Ver detalhes do produto"
-                      >
-                        <ArrowUpRight className="h-4 w-4" />
+                        Comprar
                       </button>
                     </div>
                   </div>
