@@ -19,7 +19,7 @@ const MEUS_PRODUTOS = [
   {
     id: 1,
     name: "Conjunto de Talheres Premium 17 Peças Preto Elegance",
-    estoque: "1 UND",
+    estoque: "3 UND",
     category: "Louças",
     price: 25.00,
     oldPrice: 30.00,
