@@ -50,8 +50,8 @@ const MEUS_PRODUTOS = [
     mediaType: "image",
     mediaUrl: "public/fone4.jpeg",
     additionalMedia: [
-      "public/fone4.jpeg",
-      "public/fone3.jpeg"
+      "/fone4.jpeg",
+      "/fone3.jpeg"
     ],
     specifications: [
       { name: "Tempo de conversação", value: "6 horas" },
