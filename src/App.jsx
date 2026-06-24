@@ -36,7 +36,8 @@ const MEUS_PRODUTOS = [
       { name: "Cor", value: "Preto Fosco/vermelho" },
       { name: "Quantidade de Peças", value: "17 Peças" },
       { name: "Acabamento", value: "Polido e Resistente à Corrosão" }
-    ]
+    ],
+    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
   },
   {
     id: 2,
@@ -58,7 +59,8 @@ const MEUS_PRODUTOS = [
       { name: "Tempo de espera", value: "até 15 horas" },
       { name: "Âmbito de trabalho", value: "10 metros" },
       { name: "Suporte à versão sem fio", value: "5.0 para baixo" }
-    ]
+    ],
+    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
   },
   {
     id: 3,
@@ -77,7 +79,8 @@ const MEUS_PRODUTOS = [
     ],
     specifications: [
       { name: "Cor", value: "Azul" },
-    ]
+    ],
+    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
   },
   {
     id: 4,
@@ -96,7 +99,8 @@ const MEUS_PRODUTOS = [
     ],
     specifications: [
       { name: "Cor", value: "Preto" },
-    ]
+    ],
+    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
   },
   {
     id: 5,
@@ -118,10 +122,33 @@ const MEUS_PRODUTOS = [
       { name: "Cor", value: "Preto" },
       { name: "Alcance Sem Fio", value: "Até 10 metros" },
       { name: "Tempo de Reprodução", value: "Até 6 horas contínuas" }
-    ]
+    ],
+    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
   },
   {
     id: 6,
+    name: "Fone de Ouvido Bluetooth Pro Sound Preto – Sem Fio",
+    estoque:"1 UND",
+    category: "Áudio",
+    price: 50.00,
+    oldPrice: 55.00,
+    badge: "Premium",
+    description: "Desfrute de uma experiência sonora de alta qualidade com o Fone de Ouvido Bluetooth Pro Sound. Desenvolvido para oferecer conforto.",
+    mediaType: "image",
+    mediaUrl: "/fone9.jpeg",
+    additionalMedia: [
+      "/fone9.jpeg",
+    ],
+    specifications: [
+      { name: "Tipo", value: "Fone de Ouvido Bluetooth Sem Fio" },
+      { name: "Cor", value: "Preto" },
+      { name: "Alcance Sem Fio", value: "Até 10 metros" },
+      { name: "Tempo de Reprodução", value: "Até 6 horas contínuas" }
+    ],
+    isSoldOut: true // 🔴 Adicione isso para marcar como esgotado
+  },
+  {
+    id: 7,
     name: "Tira Sagu e Strass/Napa Turim - Cristal-Silver/Branco off 526",
     number:"N° 35",
     estoque:"1 UND",
@@ -141,10 +168,11 @@ const MEUS_PRODUTOS = [
       { name: "Cor", value: "Branco" },
       { name: "Palmilha", value: "Sintético" },
       { name: "Solado", value: "Sintético" }
-    ]
+    ],
+    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
   },
   {
-    id: 7,
+    id: 8,
     name: "Tira Sagu e Strass/Napa Turim - Black Diamond-Black - Diamond/Preto 01",
     number:"N° 35 - 36",
     estoque:"2 UND",
@@ -164,18 +192,43 @@ const MEUS_PRODUTOS = [
       { name: "Cor", value: "Preto" },
       { name: "Palmilha", value: "Sintético" },
       { name: "Solado", value: "Sintético" }
-    ]
+    ],
+    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
   },
   {
-    id: 8,
-    name: "19177 Grendha Bela Ternura S - Bl872 Lilas Primavera",
+    id: 9,
+    name: "Black Diamond-Black - Diamond/Preto 01",
+    number:"N° 35 - 36",
+    estoque:"2 UND",
+    category: "Calçados",
+    price: 130.00,
+    oldPrice: 140.00,
+    badge: "Premium",
+    description: "Sempre presente no lifestyle de mulheres jovens de espirito de todas as idades, Moleca tem tudo a ver com a moda urbana que toma conta das ruas do Brasil e do mundo.",
+    mediaType: "image",
+    mediaUrl: "/sapato2.jpeg",
+    additionalMedia: [
+      "/sapato2.jpeg",
+      "/sapato1.jpeg",
+    ],
+    specifications: [
+      { name: "Forro", value: "Têxtil" },
+      { name: "Cor", value: "Preto" },
+      { name: "Palmilha", value: "Sintético" },
+      { name: "Solado", value: "Sintético" }
+    ],
+    isSoldOut: true // 🔴 Adicione isso para marcar como esgotado
+  },
+  {
+    id: 10,
+    name: "Greendha - Sandália Infantil Feminina",
     number:"N° 28",
     estoque:"1 UND",
     category: "Calçados",
     price: 25.00,
     oldPrice: 30.00,
     badge: "Premium",
-    description: "Sandalia Infantil Feminina",
+    description: "19177 Grendha Bela Ternura S - Bl872 Lilas Primavera",
     mediaType: "image",
     mediaUrl: "/sandalia6.jpeg",
     additionalMedia: [
@@ -185,7 +238,140 @@ const MEUS_PRODUTOS = [
     specifications: [
       { name: "Marca", value: "Grendha" },
       { name: "Cor", value: "Rosa" },
-    ]
+    ],
+    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
+  },
+  {
+    id: 11,
+    name: "Sandália Masculina Infantil Grandene",
+    number:"N° 31",
+    estoque:"1 UND",
+    category: "Calçados",
+    price: 25.00,
+    oldPrice: 30.00,
+    badge: "Premium",
+    description: "Sandalia Infantil Masculina",
+    mediaType: "image",
+    mediaUrl: "/sandalia8.jpeg",
+    additionalMedia: [
+      "/sandalia8.jpeg",
+      "/sandalia7.jpeg",
+    ],
+    specifications: [
+      { name: "Marca", value: "Grendene" },
+      { name: "Cor", value: "Marrom Claro" },
+    ],
+    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
+  },
+  {
+    id: 12,
+    name: "Ipanema - Sandália Infantil Feminina",
+    number:"N° 29/30",
+    estoque:"1 UND",
+    category: "Calçados",
+    price: 25.00,
+    oldPrice: 30.00,
+    badge: "Premium",
+    description: "27399 Ipanema Glow Inf - Bs202 Laranja/Laranja/Amarelo",
+    mediaType: "image",
+    mediaUrl: "/sandalia10.jpeg",
+    additionalMedia: [
+      "/sandalia10.jpeg",
+      "/sandalia9.jpeg",
+    ],
+    specifications: [
+      { name: "Marca", value: "Ipanema" },
+      { name: "Cor", value: "Laranja" },
+    ],
+    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
+  },
+  {
+    id: 13,
+    name: "Ipanema - Sandália Infantil Feminina",
+    number:"N° 25 - 31",
+    estoque:"2 UND",
+    category: "Calçados",
+    price: 25.00,
+    oldPrice: 30.00,
+    badge: "Premium",
+    description: "27235 Ipanema Diversa Sandalha - Bh058 Preto/Lilas",
+    mediaType: "image",
+    mediaUrl: "/sandalia20.jpeg",
+    additionalMedia: [
+      "/sandalia20.jpeg",
+      "/sandalia19.jpeg",
+    ],
+    specifications: [
+      { name: "Marca", value: "Ipanema" },
+      { name: "Cor", value: "Preto/Lilas" },
+    ],
+    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
+  },
+  {
+    id: 14,
+    name: "Turma do Chico - Sandália Infantil Masculina",
+    number:"N° 27/28",
+    estoque:"1 UND",
+    category: "Calçados",
+    price: 25.00,
+    oldPrice: 30.00,
+    badge: "Premium",
+    description: "27190 Ipanema Chico Bento - Bf210 Azul/Azul/Verde",
+    mediaType: "image",
+    mediaUrl: "/sandalia12.jpeg",
+    additionalMedia: [
+      "/sandalia12.jpeg",
+      "/sandalia11.jpeg",
+    ],
+    specifications: [
+      { name: "Marca", value: "Ipanema" },
+      { name: "Cor", value: "Azul/Azul/Verde" },
+    ],
+    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
+  },
+  {
+    id: 15,
+    name: "Polly e Max Steel - Sandália Infantil Masculina",
+    number:"N° 29/30",
+    estoque:"1 UND",
+    category: "Calçados",
+    price: 25.00,
+    oldPrice: 30.00,
+    badge: "Premium",
+    description: "26048 Ipanema Polly e Max Steel - Au021 Azul/Azul Medio",
+    mediaType: "image",
+    mediaUrl: "/sandalia14.jpeg",
+    additionalMedia: [
+      "/sandalia14.jpeg",
+      "/sandalia13.jpeg",
+    ],
+    specifications: [
+      { name: "Marca", value: "Ipanema" },
+      { name: "Cor", value: "Azul/Azul/Verde" },
+    ],
+    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
+  },
+  {
+    id: 16,
+    name: "Ipanema - Sandália Adulto Masculina",
+    number:"N° 39/40",
+    estoque:"1 UND",
+    category: "Calçados",
+    price: 25.00,
+    oldPrice: 30.00,
+    badge: "Premium",
+    description: "25122 - Ipanema Anatomica - 09064 Preto/Preto",
+    mediaType: "image",
+    mediaUrl: "/sandalia22.jpeg",
+    additionalMedia: [
+      "/sandalia22.jpeg",
+      "/sandalia21.jpeg",
+    ],
+    specifications: [
+      { name: "Marca", value: "Ipanema" },
+      { name: "Cor", value: "Preto" },
+    ],
+    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
   }
 ];
 
@@ -286,7 +472,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-amber-500/10 border border-amber-500/20 text-xs font-bold text-amber-600 mb-4 font-mono">
             <Sparkles className="h-3.5 w-3.5 animate-pulse" />
-            ENTREGAS A PARTIR DE R$ 50,00
+            ENTREGAS A PARTIR DE R$ 25,00
           </div>
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
             Ofertas Imperdíveis Escolhidas para Você
@@ -337,102 +523,103 @@ export default function App() {
         ) : (
           /* 🌟 MUDANÇA AQUI: grid-cols-2 no mobile (2 cards por linha) com espaçamento menor (gap-2) */
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6">
-            {filteredProducts.map((product) => (
-              <div 
-                key={product.id}
-                onClick={() => handleOpenDetails(product)}
-                className="group cursor-pointer bg-white border border-neutral-200/60 rounded-lg overflow-hidden hover:shadow-xl hover:border-neutral-300 transition-all duration-300 flex flex-col justify-between shadow-sm"
-              >
-                {/* Media Container */}
-                <div className="relative aspect-square w-full p-2 sm:p-4 bg-neutral-50 flex items-center justify-center border-b border-neutral-100">
-                  {/* Badge */}
-                  {product.badge && (
-                    <span className="absolute top-1.5 left-1.5 z-20 bg-[#cc0c39] text-white text-[8px] sm:text-[10px] font-bold tracking-wider uppercase px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-sm shadow-sm">
-                      {product.badge}
-                    </span>
-                  )}
+           {filteredProducts.map((product) => (
+  <div 
+    key={product.id}
+    // Se estiver esgotado, você decide se ainda quer abrir o modal ou bloquear o clique
+    onClick={() => !product.isSoldOut && handleOpenDetails(product)}
+    className={`group cursor-pointer bg-white border border-neutral-200/60 rounded-lg overflow-hidden transition-all duration-300 flex flex-col justify-between shadow-sm ${
+      product.isSoldOut ? 'opacity-75' : 'hover:shadow-xl hover:border-neutral-300'
+    }`}
+  >
+    {/* Media Container */}
+    <div className="relative aspect-square w-full p-2 bg-neutral-50 flex items-center justify-center border-b border-neutral-100">
+      
+      {/* Badge condicional: Se vendido, mostra 'Esgotado', se não, mostra o badge padrão */}
+      {product.isSoldOut ? (
+        <span className="absolute top-1.5 left-1.5 z-20 bg-neutral-500 text-white text-[8px] sm:text-[10px] font-bold tracking-wider uppercase px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-sm shadow-sm">
+          Esgotado
+        </span>
+      ) : product.badge && (
+        <span className="absolute top-1.5 left-1.5 z-20 bg-[#cc0c39] text-white text-[8px] sm:text-[10px] font-bold tracking-wider uppercase px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-sm shadow-sm">
+          {product.badge}
+        </span>
+      )}
 
-                  {/* Render Mídia Inicial */}
-                  {product.mediaType === "video" ? (
-                    <div className="relative w-full h-full flex items-center justify-center">
-                      <video
-                        src={product.mediaUrl}
-                        muted
-                        autoPlay
-                        loop
-                        playsInline
-                        className="max-h-full max-w-full object-contain group-hover:scale-102 transition-transform duration-500"
-                      />
-                      <span className="absolute bottom-2 right-2 z-10 h-6 w-6 sm:h-8 sm:w-8 bg-black/70 rounded-full flex items-center justify-center text-white shadow-md">
-                        <Play className="h-2.5 w-2.5 sm:h-3 sm:w-3 fill-current ml-0.5" />
-                      </span>
-                    </div>
-                  ) : (
-                    <img 
-                      src={product.mediaUrl} 
-                      alt={product.name}
-                      className="max-h-full max-w-full object-contain group-hover:scale-102 transition-transform duration-500"
-                    />
-                  )}
-                </div>
+      {/* Imagem com filtro preto e branco caso esteja esgotado */}
+      <img 
+        src={product.mediaUrl} 
+        alt={product.name}
+        className={`max-h-full max-w-full object-contain group-hover:scale-102 transition-transform duration-500 ${
+          product.isSoldOut ? 'grayscale contrast-75' : ''
+        }`}
+      />
+    </div>
 
-                {/* Conteúdo do Card */}
-                <div className="p-3 sm:p-5 flex-grow flex flex-col justify-between bg-white">
-                  <div>
-                    {/* Categoria escondida ou menor no mobile para focar no design limpo da imagem */}
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-[9px] sm:text-[11px] font-bold text-neutral-400 uppercase tracking-wide">
-                        {product.category}
-                      </span>
-                      <span className="text-[9px] sm:text-[11px] font-bold text-neutral-700 uppercase tracking-wide" >
-                        {product.estoque}
-                      </span>
-                    </div>
-                    
-                    {/* Título com texto menor no mobile (text-sm) e limite estrito de 2 linhas */}
-                    <h2 className="text-xs sm:text-base font-medium sm:font-bold text-neutral-800 group-hover:text-amber-600 transition-colors duration-200 line-clamp-2 min-h-[2rem] sm:min-h-[3rem] leading-tight">
-                      {product.name}
-                    </h2>
-                    <span className="text-[9px] sm:text-[11px] font-bold text-neutral-700 uppercase tracking-wide" >
-                        {product.number}
-                      </span>
+    {/* Conteúdo do Card */}
+    <div className="p-3 sm:p-5 flex-grow flex flex-col justify-between bg-white">
+      <div>
+        <span className="text-[9px] sm:text-[11px] font-bold text-neutral-400 uppercase tracking-wide">
+          {product.category}
+        </span>
+        <h2 className={`text-xs sm:text-base font-medium sm:font-bold line-clamp-2 min-h-[2rem] sm:min-h-[3rem] leading-tight ${
+          product.isSoldOut ? 'text-neutral-400 line-through' : 'text-neutral-800'
+        }`}>
+          {product.name}
+        </h2>
+      </div>
 
-                  </div>
+      <div className="mt-2">
+        {/* Preço riscado ou acinzentado se vendido */}
+        {/* <div className={`flex items-start gap-0.5 mb-2.5 ${product.isSoldOut ? 'opacity-40' : ''}`}>
+          <span className="text-[10px] sm:text-sm font-normal pt-0.5">R$</span>
+          <span className="text-lg sm:text-2xl font-bold tracking-tight leading-none">
+            {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[0]}
+          </span>
+          <span className="text-[10px] sm:text-sm font-bold leading-none pt-0.5">
+            {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[1]}
+          </span>
+          
+        </div> */}
 
-                  <div className="mt-2">
-                    {/* 🌟 Preço idêntico à imagem: R$ pequeno, centavos suspensos e colados */}
-                    <div className="flex items-start gap-0.5 mb-2.5">
-                      <span className="text-[10px] sm:text-sm font-normal text-neutral-900 pt-0.5">R$</span>
-                      <span className="text-lg sm:text-2xl font-bold text-neutral-900 tracking-tight leading-none">
-                        {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[0]}
-                      </span>
-                      <span className="text-[10px] sm:text-sm font-bold text-neutral-900 leading-none pt-0.5">
-                        {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[1]}
-                      </span>
-                      {product.oldPrice && (
-                        <span className="text-[9px] sm:text-xs text-neutral-400 line-through ml-1.5 self-center">
-                          {product.oldPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
-                        </span>
-                      )}
-                    </div>
+        <div className={`flex items-start gap-0.5 mb-2.5 ${product.isSoldOut ? 'opacity-40' : ''}`}>
+          <span className="text-[10px] sm:text-sm font-normal pt-0.5">R$</span>
+          <span className="text-lg sm:text-2xl font-bold tracking-tight leading-none">
+            {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[0]}
+          </span>
+          <span className="text-[10px] sm:text-sm font-bold leading-none pt-0.5">
+            {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[1]}
+          </span>
+          
+          {/* 🌟 O oldPrice voltou para o lugar dele aqui: */}
+          {product.oldPrice && (
+            <span className="text-[9px] sm:text-xs text-neutral-400 line-through ml-1.5 self-center">
+              {product.oldPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+            </span>
+          )}
+        </div>
 
-                    {/* Botões ajustados para mobile: O "Ver detalhes" some ou encolhe, priorizando o clique do Card */}
-                    <div className="flex items-center gap-1.5">
-                      <button 
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleWhatsAppLink(product);
-                        }}
-                        className="flex-1 bg-amber-400 hover:bg-amber-500 text-neutral-900 py-2 sm:py-2.5 rounded-md text-[10px] sm:text-xs font-bold transition-all active:scale-[0.98] shadow-sm"
-                      >
-                        Comprar
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            ))}
+        {/* Botão de Ação Dinâmico */}
+        <div className="flex items-center gap-1.5">
+          <button 
+            disabled={product.isSoldOut}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleWhatsAppLink(product);
+            }}
+            className={`w-full py-2 sm:py-2.5 rounded-md text-[10px] sm:text-xs font-bold transition-all shadow-sm ${
+              product.isSoldOut 
+                ? 'bg-neutral-200 text-neutral-400 cursor-not-allowed' 
+                : 'bg-amber-400 hover:bg-amber-500 text-neutral-900 active:scale-[0.98]'
+            }`}
+          >
+            {product.isSoldOut ? "Vendido" : "Comprar"}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+))}
           </div>
         )}
       </main>
