@@ -48,7 +48,7 @@ const MEUS_PRODUTOS = [
     badge: "Exclusivo",
     description: "Qualidade de som hifi estéreo entorno o mais minucioso, o melhor.",
     mediaType: "image",
-    mediaUrl: "public/fone4.jpeg",
+    mediaUrl: "/fone4.jpeg",
     additionalMedia: [
       "/fone4.jpeg",
       "/fone3.jpeg"
