@@ -18,116 +18,173 @@ import {
 const MEUS_PRODUTOS = [
   {
     id: 1,
-    name: "Conjunto de Talheres Premium 25 Peças Preto Elegance",
+    name: "Conjunto de Talheres Premium 17 Peças Preto Elegance",
+    estoque:"1 UND",
     category: "Louças",
-    price: 25.90,
-    oldPrice: 31.90,
+    price: 25.00,
+    oldPrice: 30.00,
     badge: "Mais Vendido",
     description: "Um conjunto de talheres moderno e sofisticado, ideal para complementar sua mesa com elegância e praticidade. Fabricado com materiais de alta qualidade, possui acabamento refinado e cabos ergonômicos que proporcionam conforto durante o uso. Perfeito para refeições do dia a dia, encontros familiares e ocasiões especiais.",
     mediaType: "image",
-    mediaUrl: "/talher1.webp",
+    mediaUrl: "/louca1.jpeg",
     additionalMedia: [
-      "/talher1.webp",
-      "/talher2.webp",
-      "/talher3.webp",
-      "/talher4.webp",
-      "/talher5.webp"
+      "/louca1.jpeg",
+      "/louca2.jpeg"
     ],
     specifications: [
       { name: "Material", value: "Aço Inoxidável Premium" },
-      { name: "Cor", value: "Preto Fosco" },
-      { name: "Quantidade de Peças", value: "25 Peças" },
+      { name: "Cor", value: "Preto Fosco/vermelho" },
+      { name: "Quantidade de Peças", value: "17 Peças" },
       { name: "Acabamento", value: "Polido e Resistente à Corrosão" }
     ]
   },
   {
     id: 2,
-    name: "Headphone Pro Hifi ANC-90",
+    name: "Headphone KA-916",
+    estoque:"1 UND",
     category: "Áudio",
-    price: 145.00,
+    price: 40.00,
+    oldPrice: 45.00,
     badge: "Exclusivo",
-    description: "Sinta cada nota com pureza total. Cancelamento de ruído ativo híbrido que isola o ambiente externo de forma inteligente, aliado a diafragmas de grafeno de 40mm para agudos nítidos e graves profundos.",
+    description: "Qualidade de som hifi estéreo entorno o mais minucioso, o melhor.",
     mediaType: "image",
-    mediaUrl: "https://iloft.fbitsstatic.net/img/p/headphone-anc-vintage-preto-95266/281977-1.jpg?w=520&h=520&v=202509250227&qs=ignore",
+    mediaUrl: "public/fone4.jpeg",
     additionalMedia: [
-      "https://iloft.fbitsstatic.net/img/p/headphone-anc-vintage-preto-95266/281977-1.jpg?w=520&h=520&v=202509250227&qs=ignore",
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&q=80&w=1200"
+      "public/fone4.jpeg",
+      "public/fone3.jpeg"
     ],
     specifications: [
-      { name: "Autonomia da Bateria", value: "Até 40 horas com ANC ativo" },
-      { name: "Conexão", value: "Bluetooth 5.3 Multiponto / P2" },
-      { name: "Codec Suportado", value: "LDAC, AAC, SBC" },
-      { name: "Cancelamento de Ruído", value: "Ativo e Híbrido até -42dB" }
+      { name: "Tempo de conversação", value: "6 horas" },
+      { name: "Tempo de espera", value: "até 15 horas" },
+      { name: "Âmbito de trabalho", value: "10 metros" },
+      { name: "Suporte à versão sem fio", value: "5.0 para baixo" }
     ]
   },
   {
     id: 3,
-    name: "Conjunto de Xícaras para Café com Pires Elegance Diverso – 12 Peças",
-    category: "Louças",
-    price: 27.00,
-    oldPrice: 30.00,
+    name: "Headphone WLY-501 Stitch/infantil",
+    estoque:"1 UND",
+    category: "Áudio",
+    price: 65.00,
+    oldPrice: 70.00,
     badge: "Lançamento",
-    description: "Transforme seus momentos de café em experiências especiais com este elegante conjunto de xícaras e pires na sofisticada cor Verde Tiffany. Produzido com material resistente e acabamento brilhante, o conjunto combina beleza, praticidade e durabilidade, sendo ideal para receber visitas, reuniões familiares ou para o uso diário.",
+    description: "Chamada de voz são claras e suaves. Conexão sem fio. Qualidade de som surround 360",
     mediaType: "image",
-    mediaUrl: "/xicara1.webp",
+    mediaUrl: "/fone2.jpeg",
     additionalMedia: [
-      "/xicara1.webp",
-      "/xicara2.webp",
-      "/xicara3.webp",
-      "/xicara4.webp"
+      "/fone2.jpeg",
+      "/fone1.jpeg"
     ],
     specifications: [
-      { name: "Material", value: "Cerâmica de Alta Qualidade" },
-      { name: "Cor", value: "Diverso" },
-      { name: "Quantidade de Peças", value: "12 Peças" },
-      { name: "Acabamento", value: "Brilhante e Uniforme" }
+      { name: "Cor", value: "Azul" },
     ]
   },
   {
     id: 4,
-    name: "Calça Chino Slim Fit Flex",
-    category: "Roupas",
-    price: 38.90,
-    oldPrice: 49.00,
+    name: "Headphone Bluetooth BT770",
+    estoque:"1 UND",
+    category: "Áudio",
+    price: 55.00,
+    oldPrice: 60.00,
     badge: "Exclusivo",
-    description: "A versatilidade que o seu guarda-roupa precisa. Transita facilmente entre o escritório e o happy hour. Produzida em sarja acetinada com elastano de alta recuperação, garantindo liberdade total de movimento sem deformar os joelhos ao longo do dia.",
+    description: "Active Noise Cancelling",
     mediaType: "image",
-    mediaUrl: "/shortf1.webp",
+    mediaUrl: "/fone8.jpeg",
     additionalMedia: [
-      "/shortf1.webp",
-      "/shortf2.webp",
-      "/shortf3.webp",
-      "/shortf4.webp",
+      "/fone8.jpeg",
+      "/fone7.jpeg",
     ],
     specifications: [
-      { name: "Tecido", value: "Sarja Peletizada Com Elastano" },
-      { name: "Composição", value: "98% Algodão / 2% Elastano Lycra" },
-      { name: "Bolsos", value: "2 Frontais tipo faca / 2 Traseiros embutidos" },
-      { name: "Modelagem", value: "Slim Ajustada (Moderna)" }
+      { name: "Cor", value: "Preto" },
     ]
   },
   {
     id: 5,
     name: "Fone de Ouvido Bluetooth Pro Sound Preto – Sem Fio",
-    category: "Acessórios",
-    price: 98.00,
-    oldPrice: 110.00,
+    estoque:"1 UND",
+    category: "Áudio",
+    price: 50.00,
+    oldPrice: 55.00,
     badge: "Premium",
-    description: "Desfrute de uma experiência sonora de alta qualidade com o Fone de Ouvido Bluetooth Pro Sound. Desenvolvido para oferecer conforto, praticidade e excelente desempenho, ele proporciona conexão rápida e estável com smartphones, tablets e notebooks.",
+    description: "Desfrute de uma experiência sonora de alta qualidade com o Fone de Ouvido Bluetooth Pro Sound. Desenvolvido para oferecer conforto.",
     mediaType: "image",
-    mediaUrl: "/fone1.webp",
+    mediaUrl: "/fone6.jpeg",
     additionalMedia: [
-      "/fone1.webp",
-      "/fone2.webp",
-      "/fone3.webp",
-      "/fone4.webp"
+      "/fone6.jpeg",
+      "/fone5.jpeg",
     ],
     specifications: [
       { name: "Tipo", value: "Fone de Ouvido Bluetooth Sem Fio" },
       { name: "Cor", value: "Preto" },
       { name: "Alcance Sem Fio", value: "Até 10 metros" },
       { name: "Tempo de Reprodução", value: "Até 6 horas contínuas" }
+    ]
+  },
+  {
+    id: 6,
+    name: "Tira Sagu e Strass/Napa Turim - Cristal-Silver/Branco off 526",
+    number:"N° 35",
+    estoque:"1 UND",
+    category: "Calçados",
+    price: 60.00,
+    oldPrice: 65.00,
+    badge: "Premium",
+    description: "Sempre presente no lifestyle de mulheres jovens de espirito de todas as idades, Moleca tem tudo a ver com a moda urbana que toma conta das ruas do Brasil e do mundo.",
+    mediaType: "image",
+    mediaUrl: "/sandalia1.jpeg",
+    additionalMedia: [
+      "/sandalia1.jpeg",
+      "/sandalia2.jpeg",
+    ],
+    specifications: [
+      { name: "Forro", value: "Têxtil" },
+      { name: "Cor", value: "Branco" },
+      { name: "Palmilha", value: "Sintético" },
+      { name: "Solado", value: "Sintético" }
+    ]
+  },
+  {
+    id: 7,
+    name: "Tira Sagu e Strass/Napa Turim - Black Diamond-Black - Diamond/Preto 01",
+    number:"N° 35 - 36",
+    estoque:"2 UND",
+    category: "Calçados",
+    price: 60.00,
+    oldPrice: 65.00,
+    badge: "Premium",
+    description: "Sempre presente no lifestyle de mulheres jovens de espirito de todas as idades, Moleca tem tudo a ver com a moda urbana que toma conta das ruas do Brasil e do mundo.",
+    mediaType: "image",
+    mediaUrl: "/sandalia3.jpeg",
+    additionalMedia: [
+      "/sandalia3.jpeg",
+      "/sandalia4.jpeg",
+    ],
+    specifications: [
+      { name: "Forro", value: "Têxtil" },
+      { name: "Cor", value: "Preto" },
+      { name: "Palmilha", value: "Sintético" },
+      { name: "Solado", value: "Sintético" }
+    ]
+  },
+  {
+    id: 8,
+    name: "19177 Grendha Bela Ternura S - Bl872 Lilas Primavera",
+    number:"N° 28",
+    estoque:"1 UND",
+    category: "Calçados",
+    price: 25.00,
+    oldPrice: 30.00,
+    badge: "Premium",
+    description: "Sandalia Infantil Feminina",
+    mediaType: "image",
+    mediaUrl: "/sandalia6.jpeg",
+    additionalMedia: [
+      "/sandalia6.jpeg",
+      "/sandalia5.jpeg",
+    ],
+    specifications: [
+      { name: "Marca", value: "Grendha" },
+      { name: "Cor", value: "Rosa" },
     ]
   }
 ];
@@ -327,12 +384,19 @@ export default function App() {
                       <span className="text-[9px] sm:text-[11px] font-bold text-neutral-400 uppercase tracking-wide">
                         {product.category}
                       </span>
+                      <span className="text-[9px] sm:text-[11px] font-bold text-neutral-700 uppercase tracking-wide" >
+                        {product.estoque}
+                      </span>
                     </div>
                     
                     {/* Título com texto menor no mobile (text-sm) e limite estrito de 2 linhas */}
                     <h2 className="text-xs sm:text-base font-medium sm:font-bold text-neutral-800 group-hover:text-amber-600 transition-colors duration-200 line-clamp-2 min-h-[2rem] sm:min-h-[3rem] leading-tight">
                       {product.name}
                     </h2>
+                    <span className="text-[9px] sm:text-[11px] font-bold text-neutral-700 uppercase tracking-wide" >
+                        {product.number}
+                      </span>
+
                   </div>
 
                   <div className="mt-2">
@@ -373,29 +437,31 @@ export default function App() {
         )}
       </main>
 
+      
       {/* DETALHES MODAL */}
       {selectedProduct && (
-        <div className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-4 bg-black/60 backdrop-blur-sm overflow-y-auto">
-          <div className="relative w-full max-w-5xl bg-white rounded-xl shadow-2xl overflow-hidden my-auto mb-12 lg:mb-8 border border-neutral-200">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/60 backdrop-blur-sm overflow-y-auto">
+          {/* Container do Modal com max-h dinâmico no mobile para não estourar a tela */}
+          <div className="relative w-full max-w-5xl bg-white rounded-xl shadow-2xl overflow-hidden my-auto max-h-[92vh] sm:max-h-none flex flex-col border border-neutral-200">
             
-            {/* Fechar Modal */}
+            {/* Fechar Modal - Posicionado fixo e menor no mobile para não cobrir a imagem */}
             <button 
               onClick={() => setSelectedProduct(null)}
-              className="absolute top-4 right-4 z-30 p-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-500 hover:text-neutral-800 rounded-full border border-neutral-200 transition-colors shadow-sm focus:outline-none"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 z-30 p-1.5 sm:p-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-500 hover:text-neutral-800 rounded-full border border-neutral-200 transition-colors shadow-sm focus:outline-none"
             >
-              <X className="h-4 w-4" />
+              <X className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
             </button>
 
-            {/* Layout em Duas Colunas */}
-            <div className="grid grid-cols-1 lg:grid-cols-12">
+            {/* Scroll interno apenas se o conteúdo acumular muito no mobile */}
+            <div className="overflow-y-auto flex-grow grid grid-cols-1 lg:grid-cols-12">
               
-              {/* Coluna 1: Mídias do Produto (Lado Esquerdo Claro) */}
-              <div className="lg:col-span-7 bg-neutral-50 p-6 flex flex-col justify-between min-h-[350px] sm:min-h-[400px] lg:min-h-[550px] border-r border-neutral-100">
+              {/* Coluna 1: Mídias do Produto (Compactado no Mobile) */}
+              <div className="lg:col-span-7 bg-neutral-50 p-3 sm:p-6 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-neutral-100">
                 
-                {/* Visualizador Principal */}
-                <div className="relative flex-grow flex items-center justify-center rounded-xl overflow-hidden bg-white border border-neutral-200/60 p-4 shadow-inner">
+                {/* Visualizador Principal - Muito mais baixo no mobile */}
+                <div className="relative flex-grow flex items-center justify-center rounded-lg overflow-hidden bg-white border border-neutral-200/60 p-2 sm:p-4 shadow-inner min-h-[180px] max-h-[220px] sm:max-h-[380px]">
                   {selectedProduct.mediaType === 'video' && activeMediaIndex === 0 ? (
-                    <div className="relative w-full h-full aspect-video flex items-center justify-center">
+                    <div className="relative w-full h-full flex items-center justify-center">
                       <video 
                         src={selectedProduct.mediaUrl}
                         controls
@@ -403,13 +469,13 @@ export default function App() {
                         autoPlay
                         loop
                         playsInline
-                        className="max-h-[380px] object-contain"
+                        className="max-h-[180px] sm:max-h-[380px] object-contain"
                       />
                       <button 
                         onClick={() => setVideoMuted(!videoMuted)}
-                        className="absolute bottom-3 right-3 p-2 bg-black/70 hover:bg-black/85 text-white rounded-full transition-colors shadow-md"
+                        className="absolute bottom-2 right-2 p-1.5 bg-black/70 hover:bg-black/85 text-white rounded-full transition-colors shadow-md"
                       >
-                        {videoMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+                        {videoMuted ? <VolumeX className="h-3.5 w-3.5" /> : <Volume2 className="h-3.5 w-3.5" />}
                       </button>
                     </div>
                   ) : (
@@ -420,23 +486,23 @@ export default function App() {
                           : selectedProduct.mediaUrl
                       } 
                       alt={selectedProduct.name}
-                      className="max-h-[300px] lg:max-h-[380px] object-contain rounded-lg"
+                      className="max-h-[180px] sm:max-h-[300px] lg:max-h-[380px] object-contain rounded-md"
                     />
                   )}
                 </div>
 
-                {/* Carrossel de Miniaturas */}
+                {/* Carrossel de Miniaturas - Menor e mais colado na imagem */}
                 {selectedProduct.additionalMedia && selectedProduct.additionalMedia.length > 1 && (
-                  <div className="flex gap-2.5 mt-4 overflow-x-auto pb-1 justify-center">
+                  <div className="flex gap-2 mt-2 sm:mt-4 overflow-x-auto pb-1 justify-center">
                     {selectedProduct.mediaType === 'video' && (
                       <button 
                         onClick={() => setActiveMediaIndex(0)}
-                        className={`relative h-14 w-16 rounded-md overflow-hidden flex-shrink-0 border-2 transition-all ${
+                        className={`relative h-10 w-12 sm:h-14 sm:w-16 rounded-md overflow-hidden flex-shrink-0 border-2 transition-all ${
                           activeMediaIndex === 0 ? 'border-amber-500 scale-105 shadow-sm' : 'border-neutral-200 opacity-70'
                         }`}
                       >
                         <div className="absolute inset-0 bg-neutral-100 flex items-center justify-center">
-                          <Play className="h-4 w-4 text-neutral-800 fill-neutral-800" />
+                          <Play className="h-3.5 w-3.5 text-neutral-800 fill-neutral-800" />
                         </div>
                       </button>
                     )}
@@ -447,7 +513,7 @@ export default function App() {
                         <button
                           key={index}
                           onClick={() => setActiveMediaIndex(itemIndex)}
-                          className={`h-14 w-16 rounded-md overflow-hidden flex-shrink-0 border-2 transition-all ${
+                          className={`h-10 w-12 sm:h-14 sm:w-16 rounded-md overflow-hidden flex-shrink-0 border-2 transition-all ${
                             activeMediaIndex === itemIndex ? 'border-amber-500 scale-105 shadow-sm' : 'border-neutral-200 opacity-70'
                           }`}
                         >
@@ -459,20 +525,20 @@ export default function App() {
                 )}
               </div>
 
-              {/* Coluna 2: Informações (Lado Direito Moderno) */}
-              <div className="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between bg-white">
+              {/* Coluna 2: Informações (Ajustes de espaçamentos verticais) */}
+              <div className="lg:col-span-5 p-4 sm:p-8 flex flex-col justify-between bg-white">
                 <div>
-                  <span className="text-[10px] font-bold tracking-wider text-amber-700 uppercase bg-amber-500/10 px-2.5 py-1 rounded">
+                  <span className="text-[9px] sm:text-[10px] font-bold tracking-wider text-amber-700 uppercase bg-amber-500/10 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded">
                     {selectedProduct.category}
                   </span>
 
-                  <h1 className="text-xl sm:text-2xl font-bold text-neutral-900 mt-3 mb-2 leading-tight">
+                  <h1 className="text-lg sm:text-2xl font-bold text-neutral-900 mt-1.5 sm:mt-3 mb-1 sm:mb-2 leading-tight">
                     {selectedProduct.name}
                   </h1>
 
-                  <div className="flex items-baseline gap-2 mb-4 border-b border-neutral-100 pb-4">
+                  <div className="flex items-baseline gap-2 mb-2 sm:mb-4 border-b border-neutral-100 pb-2 sm:pb-4">
                     <span className="text-xs text-neutral-600 mr-1">Preço:</span>
-                    <span className="text-2xl font-bold text-[#b12704]">
+                    <span className="text-xl sm:text-2xl font-bold text-[#b12704]">
                       {selectedProduct.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                     </span>
                     {selectedProduct.oldPrice && (
@@ -482,17 +548,17 @@ export default function App() {
                     )}
                   </div>
 
-                  <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed mb-5">
+                  <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-5">
                     {selectedProduct.description}
                   </p>
 
-                  <div className="mb-5">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2 font-mono">Especificações Técnicas</h3>
-                    <div className="space-y-1.5 bg-neutral-50 p-3.5 rounded-lg border border-neutral-200 text-xs">
+                  <div className="mb-4 sm:mb-5">
+                    <h3 className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-neutral-400 mb-1.5 font-mono">Especificações Técnicas</h3>
+                    <div className="space-y-1 bg-neutral-50 p-2.5 sm:p-3.5 rounded-lg border border-neutral-200/80 text-xs">
                       {selectedProduct.specifications ? selectedProduct.specifications.map((spec, i) => (
-                        <div key={i} className="flex justify-between border-b border-neutral-200/60 pb-1.5 last:border-b-0 last:pb-0">
+                        <div key={i} className="flex justify-between border-b border-neutral-200/60 pb-1 last:border-b-0 last:pb-0">
                           <span className="text-neutral-500">{spec.name}</span>
-                          <span className="text-neutral-800 font-semibold">{spec.value}</span>
+                          <span className="text-neutral-800 font-semibold text-right pl-2">{spec.value}</span>
                         </div>
                       )) : (
                         <p className="text-neutral-500">Sob consulta com vendedor.</p>
@@ -501,21 +567,23 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Área de Ação WhatsApp */}
-                <div className="border-t border-neutral-100 pt-4">
-                  <div className="bg-emerald-50 rounded-xl p-3.5 border border-emerald-200 mb-4 flex gap-3 items-start">
-                    <div className="p-2 bg-emerald-500 text-white rounded-lg hidden sm:block">
-                      <MessageCircle className="h-4 w-4 fill-current" />
+                {/* Área de Ação WhatsApp - Mais compacta */}
+                <div className="border-t border-neutral-100 pt-3">
+                  <div className="bg-emerald-50 rounded-lg p-2.5 border border-emerald-200 mb-3 flex gap-2 items-center sm:items-start">
+                    <div className="p-1.5 bg-emerald-500 text-white rounded-md hidden sm:block">
+                      <MessageCircle className="h-3.5 w-3.5 fill-current" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-emerald-800 uppercase tracking-wide">Compra Garantida</h4>
-                      <p className="text-[11px] text-emerald-700 leading-normal mt-0.5">Clique no botão abaixo para alinhar os detalhes da entrega direto com o vendedor especialista.</p>
+                      <p className="text-[11px] text-emerald-700 leading-tight">
+                        <span className="font-bold sm:inline block text-emerald-800 sm:mr-1">Compra Garantida:</span>
+                        Combine os detalhes da entrega direto pelo WhatsApp.
+                      </p>
                     </div>
                   </div>
 
                   <button
                     onClick={() => handleWhatsAppLink(selectedProduct)}
-                    className="w-full bg-[#f0c14b] hover:bg-[#e7b43b] text-neutral-900 border border-[#a88734] py-3.5 rounded-lg font-bold transition-all flex items-center justify-center gap-2 cursor-pointer text-xs sm:text-sm shadow-sm active:scale-[0.99]"
+                    className="w-full bg-[#f0c14b] hover:bg-[#e7b43b] text-neutral-900 border border-[#a88734] py-2.5 sm:py-3.5 rounded-lg font-bold transition-all flex items-center justify-center gap-2 cursor-pointer text-xs sm:text-sm shadow-sm active:scale-[0.99]"
                   >
                     <MessageCircle className="h-4 w-4 fill-current stroke-[2]" />
                     Falar com Vendedor no WhatsApp
@@ -528,6 +596,7 @@ export default function App() {
           </div>
         </div>
       )}
+
 
       {/* FOOTER */}
       <footer className="border-t border-neutral-200 bg-[#131921] py-10 px-6 text-center text-xs text-neutral-400">
