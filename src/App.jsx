@@ -1,25 +1,25 @@
 import React, { useState, useMemo } from 'react';
-import { 
-  ShoppingBag, 
-  Search, 
-  MessageCircle, 
-  X, 
-  Maximize2, 
-  Volume2, 
-  VolumeX, 
-  Play, 
-  Sparkles, 
-  ArrowUpRight, 
-  Check, 
-  ChevronRight, 
-  SlidersHorizontal 
+import {
+  ShoppingBag,
+  Search,
+  MessageCircle,
+  X,
+  Maximize2,
+  Volume2,
+  VolumeX,
+  Play,
+  Sparkles,
+  ArrowUpRight,
+  Check,
+  ChevronRight,
+  SlidersHorizontal
 } from 'lucide-react';
 
 const MEUS_PRODUTOS = [
   {
     id: 1,
     name: "Conjunto de Talheres Premium 17 Peças Preto Elegance",
-    estoque:"1 UND",
+    estoque: "1 UND",
     category: "Louças",
     price: 25.00,
     oldPrice: 30.00,
@@ -42,7 +42,7 @@ const MEUS_PRODUTOS = [
   {
     id: 2,
     name: "Headphone KA-916",
-    estoque:"1 UND",
+    estoque: "1 UND",
     category: "Áudio",
     price: 40.00,
     oldPrice: 45.00,
@@ -65,7 +65,7 @@ const MEUS_PRODUTOS = [
   {
     id: 3,
     name: "Headphone WLY-501 Stitch/infantil",
-    estoque:"1 UND",
+    estoque: "1 UND",
     category: "Áudio",
     price: 65.00,
     oldPrice: 70.00,
@@ -85,7 +85,7 @@ const MEUS_PRODUTOS = [
   {
     id: 4,
     name: "Headphone Bluetooth BT770",
-    estoque:"1 UND",
+    estoque: "1 UND",
     category: "Áudio",
     price: 55.00,
     oldPrice: 60.00,
@@ -105,7 +105,7 @@ const MEUS_PRODUTOS = [
   {
     id: 5,
     name: "Fone de Ouvido Bluetooth Pro Sound Preto – Sem Fio",
-    estoque:"1 UND",
+    estoque: "1 UND",
     category: "Áudio",
     price: 50.00,
     oldPrice: 55.00,
@@ -128,7 +128,7 @@ const MEUS_PRODUTOS = [
   {
     id: 6,
     name: "Fone de Ouvido Bluetooth Pro Sound Preto – Sem Fio",
-    estoque:"1 UND",
+    estoque: "1 UND",
     category: "Áudio",
     price: 50.00,
     oldPrice: 55.00,
@@ -150,8 +150,8 @@ const MEUS_PRODUTOS = [
   {
     id: 7,
     name: "Tira Sagu e Strass/Napa Turim - Cristal-Silver/Branco off 526",
-    number:"N° 35",
-    estoque:"1 UND",
+    number: "N° 35",
+    estoque: "1 UND",
     category: "Calçados",
     price: 60.00,
     oldPrice: 65.00,
@@ -174,8 +174,8 @@ const MEUS_PRODUTOS = [
   {
     id: 8,
     name: "Tira Sagu e Strass/Napa Turim - Black Diamond-Black - Diamond/Preto 01",
-    number:"N° 35 - 36",
-    estoque:"2 UND",
+    number: "N° 35 - 36",
+    estoque: "2 UND",
     category: "Calçados",
     price: 60.00,
     oldPrice: 65.00,
@@ -198,8 +198,8 @@ const MEUS_PRODUTOS = [
   {
     id: 9,
     name: "Black Diamond-Black - Diamond/Preto 01",
-    number:"N° 35 - 36",
-    estoque:"2 UND",
+    number: "N° 35 - 36",
+    estoque: "2 UND",
     category: "Calçados",
     price: 130.00,
     oldPrice: 140.00,
@@ -222,8 +222,8 @@ const MEUS_PRODUTOS = [
   {
     id: 10,
     name: "Greendha - Sandália Infantil Feminina",
-    number:"N° 28",
-    estoque:"1 UND",
+    number: "N° 28",
+    estoque: "1 UND",
     category: "Calçados",
     price: 25.00,
     oldPrice: 30.00,
@@ -244,8 +244,8 @@ const MEUS_PRODUTOS = [
   {
     id: 11,
     name: "Sandália Masculina Infantil Grandene",
-    number:"N° 31",
-    estoque:"1 UND",
+    number: "N° 31",
+    estoque: "1 UND",
     category: "Calçados",
     price: 25.00,
     oldPrice: 30.00,
@@ -266,8 +266,8 @@ const MEUS_PRODUTOS = [
   {
     id: 12,
     name: "Ipanema - Sandália Infantil Feminina",
-    number:"N° 29/30",
-    estoque:"1 UND",
+    number: "N° 29/30",
+    estoque: "1 UND",
     category: "Calçados",
     price: 25.00,
     oldPrice: 30.00,
@@ -288,8 +288,8 @@ const MEUS_PRODUTOS = [
   {
     id: 13,
     name: "Ipanema - Sandália Infantil Feminina",
-    number:"N° 25 - 31",
-    estoque:"2 UND",
+    number: "N° 25 - 31",
+    estoque: "2 UND",
     category: "Calçados",
     price: 25.00,
     oldPrice: 30.00,
@@ -310,8 +310,8 @@ const MEUS_PRODUTOS = [
   {
     id: 14,
     name: "Turma do Chico - Sandália Infantil Masculina",
-    number:"N° 27/28",
-    estoque:"1 UND",
+    number: "N° 27/28",
+    estoque: "1 UND",
     category: "Calçados",
     price: 25.00,
     oldPrice: 30.00,
@@ -332,8 +332,8 @@ const MEUS_PRODUTOS = [
   {
     id: 15,
     name: "Polly e Max Steel - Sandália Infantil Masculina",
-    number:"N° 29/30",
-    estoque:"1 UND",
+    number: "N° 29/30",
+    estoque: "1 UND",
     category: "Calçados",
     price: 25.00,
     oldPrice: 30.00,
@@ -354,8 +354,8 @@ const MEUS_PRODUTOS = [
   {
     id: 16,
     name: "Ipanema - Sandália Adulto Masculina",
-    number:"N° 39/40",
-    estoque:"1 UND",
+    number: "N° 39/40",
+    estoque: "1 UND",
     category: "Calçados",
     price: 25.00,
     oldPrice: 30.00,
@@ -376,8 +376,8 @@ const MEUS_PRODUTOS = [
 ];
 
 export default function App() {
-  const WHATSAPP_NUMERO = "5591992209101"; 
-  
+  const WHATSAPP_NUMERO = "5591992209101";
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Todos');
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -392,7 +392,7 @@ export default function App() {
   const filteredProducts = useMemo(() => {
     return MEUS_PRODUTOS.filter(product => {
       const matchesSearch = product.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            product.description.toLowerCase().includes(searchTerm.toLowerCase());
+        product.description.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'Todos' || product.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
@@ -413,11 +413,11 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#eaeded] text-neutral-800 font-sans antialiased selection:bg-amber-500 selection:text-white">
-      
+
       {/* HEADER / NAV */}
       <nav className="sticky top-0 z-40 bg-[#131921] px-6 py-4 transition-all shadow-md">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 items-center justify-between">
-          
+
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 bg-amber-500 rounded-xl flex items-center justify-center shadow-md">
@@ -444,8 +444,8 @@ export default function App() {
               className="w-full pl-10 pr-12 py-2.5 bg-white border border-transparent rounded-lg text-sm text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all shadow-sm"
             />
             {searchTerm && (
-              <button 
-                onClick={() => setSearchTerm('')} 
+              <button
+                onClick={() => setSearchTerm('')}
                 className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-neutral-400 hover:text-neutral-600 transition-colors"
               >
                 <X className="h-4 w-4" />
@@ -491,11 +491,10 @@ export default function App() {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all duration-200 ${
-                  selectedCategory === cat
-                    ? 'bg-amber-500 text-neutral-950 shadow-md scale-105'
-                    : 'bg-white hover:bg-neutral-100 text-neutral-700 shadow-sm'
-                }`}
+                className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all duration-200 ${selectedCategory === cat
+                  ? 'bg-amber-500 text-neutral-950 shadow-md scale-105'
+                  : 'bg-white hover:bg-neutral-100 text-neutral-700 shadow-sm'
+                  }`}
               >
                 {cat}
               </button>
@@ -507,13 +506,13 @@ export default function App() {
       {/* PRODUTOS GRID */}
       {/* PRODUTOS GRID */}
       <main className="max-w-7xl mx-auto px-2 sm:px-6 py-4 sm:py-8 relative z-10">
-        
+
         {filteredProducts.length === 0 ? (
           <div className="text-center py-20 bg-white border border-neutral-200 rounded-2xl shadow-sm">
             <Search className="h-12 w-12 text-neutral-300 mx-auto mb-4" />
             <p className="text-lg text-neutral-700 font-bold mb-2">Nenhum produto encontrado</p>
             <p className="text-sm text-neutral-500 max-w-sm mx-auto mb-6">Tente alterar o filtro de categoria ou redefinir sua busca digitando outro termo.</p>
-            <button 
+            <button
               onClick={() => { setSearchTerm(''); setSelectedCategory('Todos'); }}
               className="px-5 py-2 bg-neutral-800 hover:bg-neutral-900 text-white text-xs font-bold rounded-lg transition-colors shadow-sm"
             >
@@ -523,55 +522,76 @@ export default function App() {
         ) : (
           /* 🌟 MUDANÇA AQUI: grid-cols-2 no mobile (2 cards por linha) com espaçamento menor (gap-2) */
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6">
-           {filteredProducts.map((product) => (
-  <div 
-    key={product.id}
-    // Se estiver esgotado, você decide se ainda quer abrir o modal ou bloquear o clique
-    onClick={() => !product.isSoldOut && handleOpenDetails(product)}
-    className={`group cursor-pointer bg-white border border-neutral-200/60 rounded-lg overflow-hidden transition-all duration-300 flex flex-col justify-between shadow-sm ${
-      product.isSoldOut ? 'opacity-75' : 'hover:shadow-xl hover:border-neutral-300'
-    }`}
-  >
-    {/* Media Container */}
-    <div className="relative aspect-square w-full p-2 bg-neutral-50 flex items-center justify-center border-b border-neutral-100">
-      
-      {/* Badge condicional: Se vendido, mostra 'Esgotado', se não, mostra o badge padrão */}
-      {product.isSoldOut ? (
-        <span className="absolute top-1.5 left-1.5 z-20 bg-neutral-500 text-white text-[8px] sm:text-[10px] font-bold tracking-wider uppercase px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-sm shadow-sm">
-          Esgotado
-        </span>
-      ) : product.badge && (
-        <span className="absolute top-1.5 left-1.5 z-20 bg-[#cc0c39] text-white text-[8px] sm:text-[10px] font-bold tracking-wider uppercase px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-sm shadow-sm">
-          {product.badge}
-        </span>
-      )}
+            {filteredProducts.map((product) => (
+              <div
+                key={product.id}
+                // Se estiver esgotado, você decide se ainda quer abrir o modal ou bloquear o clique
+                onClick={() => !product.isSoldOut && handleOpenDetails(product)}
+                className={`group cursor-pointer bg-white border border-neutral-200/60 rounded-lg overflow-hidden transition-all duration-300 flex flex-col justify-between shadow-sm ${product.isSoldOut ? 'opacity-75' : 'hover:shadow-xl hover:border-neutral-300'
+                  }`}
+              >
+                {/* Media Container */}
+                <div className="relative aspect-square w-full p-2 bg-neutral-50 flex items-center justify-center border-b border-neutral-100">
 
-      {/* Imagem com filtro preto e branco caso esteja esgotado */}
-      <img 
-        src={product.mediaUrl} 
-        alt={product.name}
-        className={`max-h-full max-w-full object-contain group-hover:scale-102 transition-transform duration-500 ${
-          product.isSoldOut ? 'grayscale contrast-75' : ''
-        }`}
-      />
-    </div>
+                  {/* Badge condicional: Se vendido, mostra 'Esgotado', se não, mostra o badge padrão */}
+                  {product.isSoldOut ? (
+                    <span className="absolute top-1.5 left-1.5 z-20 bg-neutral-500 text-white text-[8px] sm:text-[10px] font-bold tracking-wider uppercase px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-sm shadow-sm">
+                      Esgotado
+                    </span>
+                  ) : product.badge && (
+                    <span className="absolute top-1.5 left-1.5 z-20 bg-[#cc0c39] text-white text-[8px] sm:text-[10px] font-bold tracking-wider uppercase px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-sm shadow-sm">
+                      {product.badge}
+                    </span>
+                  )}
 
-    {/* Conteúdo do Card */}
-    <div className="p-3 sm:p-5 flex-grow flex flex-col justify-between bg-white">
-      <div>
-        <span className="text-[9px] sm:text-[11px] font-bold text-neutral-400 uppercase tracking-wide">
-          {product.category}
-        </span>
+                  {/* Imagem com filtro preto e branco caso esteja esgotado */}
+                  <img
+                    src={product.mediaUrl}
+                    alt={product.name}
+                    className={`max-h-full max-w-full object-contain group-hover:scale-102 transition-transform duration-500 ${product.isSoldOut ? 'grayscale contrast-75' : ''
+                      }`}
+                  />
+                </div>
+
+                {/* Conteúdo do Card */}
+                <div className="p-3 sm:p-5 flex-grow flex flex-col justify-between bg-white">
+                  {/* <div>
+                    <span className="text-[9px] sm:text-[11px] font-bold text-neutral-400 uppercase tracking-wide">
+                      {product.category}
+                    </span>
+                    <h2 className={`text-xs sm:text-base font-medium sm:font-bold line-clamp-2 min-h-[2rem] sm:min-h-[3rem] leading-tight ${product.isSoldOut ? 'text-neutral-400 line-through' : 'text-neutral-800'
+                      }`}>
+                      {product.name}
+                    </h2>
+                  </div> */}
+
+                  <div>
+        {/* 🌟 Categoria e Status de Estoque alinhados perfeitamente */}
+        <div className="flex items-center justify-between mb-1.5">
+          <span className="text-[9px] sm:text-[11px] font-bold text-neutral-400 uppercase tracking-wide">
+            {product.category}
+          </span>
+          
+          {/* Mostra 'Esgotado' se vendido, ou um aviso discreto de estoque se disponível */}
+          <span className={`text-[9px] sm:text-[10px] font-bold font-mono tracking-wider uppercase ${
+            product.isSoldOut ? 'text-neutral-400' : 'text-emerald-600'
+          }`}>
+            {product.isSoldOut ? 'Sem Estoque' : 'Em Estoque'}
+          </span>
+        </div>
+        
+        {/* Título com limite de 2 linhas */}
         <h2 className={`text-xs sm:text-base font-medium sm:font-bold line-clamp-2 min-h-[2rem] sm:min-h-[3rem] leading-tight ${
-          product.isSoldOut ? 'text-neutral-400 line-through' : 'text-neutral-800'
+          product.isSoldOut ? 'text-neutral-400 line-through' : 'text-neutral-800 group-hover:text-amber-600'
         }`}>
           {product.name}
         </h2>
       </div>
 
-      <div className="mt-2">
-        {/* Preço riscado ou acinzentado se vendido */}
-        {/* <div className={`flex items-start gap-0.5 mb-2.5 ${product.isSoldOut ? 'opacity-40' : ''}`}>
+
+                  <div className="mt-2">
+                    {/* Preço riscado ou acinzentado se vendido */}
+                    {/* <div className={`flex items-start gap-0.5 mb-2.5 ${product.isSoldOut ? 'opacity-40' : ''}`}>
           <span className="text-[10px] sm:text-sm font-normal pt-0.5">R$</span>
           <span className="text-lg sm:text-2xl font-bold tracking-tight leading-none">
             {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[0]}
@@ -582,57 +602,56 @@ export default function App() {
           
         </div> */}
 
-        <div className={`flex items-start gap-0.5 mb-2.5 ${product.isSoldOut ? 'opacity-40' : ''}`}>
-          <span className="text-[10px] sm:text-sm font-normal pt-0.5">R$</span>
-          <span className="text-lg sm:text-2xl font-bold tracking-tight leading-none">
-            {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[0]}
-          </span>
-          <span className="text-[10px] sm:text-sm font-bold leading-none pt-0.5">
-            {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[1]}
-          </span>
-          
-          {/* 🌟 O oldPrice voltou para o lugar dele aqui: */}
-          {product.oldPrice && (
-            <span className="text-[9px] sm:text-xs text-neutral-400 line-through ml-1.5 self-center">
-              {product.oldPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
-            </span>
-          )}
-        </div>
+                    <div className={`flex items-start gap-0.5 mb-2.5 ${product.isSoldOut ? 'opacity-40' : ''}`}>
+                      <span className="text-[10px] sm:text-sm font-normal pt-0.5">R$</span>
+                      <span className="text-lg sm:text-2xl font-bold tracking-tight leading-none">
+                        {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[0]}
+                      </span>
+                      <span className="text-[10px] sm:text-sm font-bold leading-none pt-0.5">
+                        {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[1]}
+                      </span>
 
-        {/* Botão de Ação Dinâmico */}
-        <div className="flex items-center gap-1.5">
-          <button 
-            disabled={product.isSoldOut}
-            onClick={(e) => {
-              e.stopPropagation();
-              handleWhatsAppLink(product);
-            }}
-            className={`w-full py-2 sm:py-2.5 rounded-md text-[10px] sm:text-xs font-bold transition-all shadow-sm ${
-              product.isSoldOut 
-                ? 'bg-neutral-200 text-neutral-400 cursor-not-allowed' 
-                : 'bg-amber-400 hover:bg-amber-500 text-neutral-900 active:scale-[0.98]'
-            }`}
-          >
-            {product.isSoldOut ? "Vendido" : "Comprar"}
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-))}
+                      {/* 🌟 O oldPrice voltou para o lugar dele aqui: */}
+                      {product.oldPrice && (
+                        <span className="text-[9px] sm:text-xs text-neutral-400 line-through ml-1.5 self-center">
+                          {product.oldPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Botão de Ação Dinâmico */}
+                    <div className="flex items-center gap-1.5">
+                      <button
+                        disabled={product.isSoldOut}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleWhatsAppLink(product);
+                        }}
+                        className={`w-full py-2 sm:py-2.5 rounded-md text-[10px] sm:text-xs font-bold transition-all shadow-sm ${product.isSoldOut
+                          ? 'bg-neutral-200 text-neutral-400 cursor-not-allowed'
+                          : 'bg-amber-400 hover:bg-amber-500 text-neutral-900 active:scale-[0.98]'
+                          }`}
+                      >
+                        {product.isSoldOut ? "Vendido" : "Comprar"}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         )}
       </main>
 
-      
+
       {/* DETALHES MODAL */}
       {selectedProduct && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/60 backdrop-blur-sm overflow-y-auto">
           {/* Container do Modal com max-h dinâmico no mobile para não estourar a tela */}
           <div className="relative w-full max-w-5xl bg-white rounded-xl shadow-2xl overflow-hidden my-auto max-h-[92vh] sm:max-h-none flex flex-col border border-neutral-200">
-            
+
             {/* Fechar Modal - Posicionado fixo e menor no mobile para não cobrir a imagem */}
-            <button 
+            <button
               onClick={() => setSelectedProduct(null)}
               className="absolute top-2 right-2 sm:top-4 sm:right-4 z-30 p-1.5 sm:p-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-500 hover:text-neutral-800 rounded-full border border-neutral-200 transition-colors shadow-sm focus:outline-none"
             >
@@ -641,15 +660,15 @@ export default function App() {
 
             {/* Scroll interno apenas se o conteúdo acumular muito no mobile */}
             <div className="overflow-y-auto flex-grow grid grid-cols-1 lg:grid-cols-12">
-              
+
               {/* Coluna 1: Mídias do Produto (Compactado no Mobile) */}
               <div className="lg:col-span-7 bg-neutral-50 p-3 sm:p-6 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-neutral-100">
-                
+
                 {/* Visualizador Principal - Muito mais baixo no mobile */}
                 <div className="relative flex-grow flex items-center justify-center rounded-lg overflow-hidden bg-white border border-neutral-200/60 p-2 sm:p-4 shadow-inner min-h-[180px] max-h-[220px] sm:max-h-[380px]">
                   {selectedProduct.mediaType === 'video' && activeMediaIndex === 0 ? (
                     <div className="relative w-full h-full flex items-center justify-center">
-                      <video 
+                      <video
                         src={selectedProduct.mediaUrl}
                         controls
                         muted={videoMuted}
@@ -658,7 +677,7 @@ export default function App() {
                         playsInline
                         className="max-h-[180px] sm:max-h-[380px] object-contain"
                       />
-                      <button 
+                      <button
                         onClick={() => setVideoMuted(!videoMuted)}
                         className="absolute bottom-2 right-2 p-1.5 bg-black/70 hover:bg-black/85 text-white rounded-full transition-colors shadow-md"
                       >
@@ -666,12 +685,12 @@ export default function App() {
                       </button>
                     </div>
                   ) : (
-                    <img 
+                    <img
                       src={
-                        selectedProduct.additionalMedia && selectedProduct.additionalMedia[activeMediaIndex] 
-                          ? selectedProduct.additionalMedia[activeMediaIndex] 
+                        selectedProduct.additionalMedia && selectedProduct.additionalMedia[activeMediaIndex]
+                          ? selectedProduct.additionalMedia[activeMediaIndex]
                           : selectedProduct.mediaUrl
-                      } 
+                      }
                       alt={selectedProduct.name}
                       className="max-h-[180px] sm:max-h-[300px] lg:max-h-[380px] object-contain rounded-md"
                     />
@@ -682,11 +701,10 @@ export default function App() {
                 {selectedProduct.additionalMedia && selectedProduct.additionalMedia.length > 1 && (
                   <div className="flex gap-2 mt-2 sm:mt-4 overflow-x-auto pb-1 justify-center">
                     {selectedProduct.mediaType === 'video' && (
-                      <button 
+                      <button
                         onClick={() => setActiveMediaIndex(0)}
-                        className={`relative h-10 w-12 sm:h-14 sm:w-16 rounded-md overflow-hidden flex-shrink-0 border-2 transition-all ${
-                          activeMediaIndex === 0 ? 'border-amber-500 scale-105 shadow-sm' : 'border-neutral-200 opacity-70'
-                        }`}
+                        className={`relative h-10 w-12 sm:h-14 sm:w-16 rounded-md overflow-hidden flex-shrink-0 border-2 transition-all ${activeMediaIndex === 0 ? 'border-amber-500 scale-105 shadow-sm' : 'border-neutral-200 opacity-70'
+                          }`}
                       >
                         <div className="absolute inset-0 bg-neutral-100 flex items-center justify-center">
                           <Play className="h-3.5 w-3.5 text-neutral-800 fill-neutral-800" />
@@ -700,9 +718,8 @@ export default function App() {
                         <button
                           key={index}
                           onClick={() => setActiveMediaIndex(itemIndex)}
-                          className={`h-10 w-12 sm:h-14 sm:w-16 rounded-md overflow-hidden flex-shrink-0 border-2 transition-all ${
-                            activeMediaIndex === itemIndex ? 'border-amber-500 scale-105 shadow-sm' : 'border-neutral-200 opacity-70'
-                          }`}
+                          className={`h-10 w-12 sm:h-14 sm:w-16 rounded-md overflow-hidden flex-shrink-0 border-2 transition-all ${activeMediaIndex === itemIndex ? 'border-amber-500 scale-105 shadow-sm' : 'border-neutral-200 opacity-70'
+                            }`}
                         >
                           <img src={media} alt="Miniatura" className="h-full w-full object-cover" />
                         </button>
