@@ -554,29 +554,19 @@ export default function App() {
                 </div>
 
                 {/* Conteúdo do Card */}
-                <div className="p-3 sm:p-5 flex-grow flex flex-col justify-between bg-white">
-                  {/* <div>
-                    <span className="text-[9px] sm:text-[11px] font-bold text-neutral-400 uppercase tracking-wide">
-                      {product.category}
-                    </span>
-                    <h2 className={`text-xs sm:text-base font-medium sm:font-bold line-clamp-2 min-h-[2rem] sm:min-h-[3rem] leading-tight ${product.isSoldOut ? 'text-neutral-400 line-through' : 'text-neutral-800'
-                      }`}>
-                      {product.name}
-                    </h2>
-                  </div> */}
-
-                  <div>
-        {/* 🌟 Categoria e Status de Estoque alinhados perfeitamente */}
+                {/* Conteúdo do Card */}
+    <div className="p-3 sm:p-5 flex-grow flex flex-col justify-between bg-white">
+      <div>
+        {/* Categoria e Status de Estoque (Usando sua propriedade product.estoque) */}
         <div className="flex items-center justify-between mb-1.5">
           <span className="text-[9px] sm:text-[11px] font-bold text-neutral-400 uppercase tracking-wide">
             {product.category}
           </span>
           
-          {/* Mostra 'Esgotado' se vendido, ou um aviso discreto de estoque se disponível */}
           <span className={`text-[9px] sm:text-[10px] font-bold font-mono tracking-wider uppercase ${
             product.isSoldOut ? 'text-neutral-400' : 'text-emerald-600'
           }`}>
-            {product.isSoldOut ? 'Sem Estoque' : 'Em Estoque'}
+            {product.isSoldOut ? 'Sem Estoque' : product.estoque || 'Em Estoque'}
           </span>
         </div>
         
@@ -586,12 +576,22 @@ export default function App() {
         }`}>
           {product.name}
         </h2>
+
+        {/* 🌟 A numeração do calçado (ex: N° 29/30) inserida bem aqui embaixo do título */}
+        {product.number && (
+          <div className="mt-1 flex items-center">
+            <span className={`text-[10px] sm:text-xs font-bold px-1.5 py-0.5 rounded bg-neutral-100 border border-neutral-200/60 font-mono ${
+              product.isSoldOut ? 'text-neutral-400 line-through bg-neutral-50' : 'text-neutral-700'
+            }`}>
+              {product.number}
+            </span>
+          </div>
+        )}
       </div>
 
-
-                  <div className="mt-2">
-                    {/* Preço riscado ou acinzentado se vendido */}
-                    {/* <div className={`flex items-start gap-0.5 mb-2.5 ${product.isSoldOut ? 'opacity-40' : ''}`}>
+      <div className="mt-2">
+        {/* Preço com suporte a oldPrice (Estilizado para Esgotado ou Disponível) */}
+        <div className={`flex items-start gap-0.5 mb-2.5 ${product.isSoldOut ? 'opacity-40' : ''}`}>
           <span className="text-[10px] sm:text-sm font-normal pt-0.5">R$</span>
           <span className="text-lg sm:text-2xl font-bold tracking-tight leading-none">
             {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[0]}
@@ -600,43 +600,32 @@ export default function App() {
             {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[1]}
           </span>
           
-        </div> */}
+          {product.oldPrice && (
+            <span className="text-[9px] sm:text-xs text-neutral-400 line-through ml-1.5 self-center">
+              {product.oldPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+            </span>
+          )}
+        </div>
 
-                    <div className={`flex items-start gap-0.5 mb-2.5 ${product.isSoldOut ? 'opacity-40' : ''}`}>
-                      <span className="text-[10px] sm:text-sm font-normal pt-0.5">R$</span>
-                      <span className="text-lg sm:text-2xl font-bold tracking-tight leading-none">
-                        {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[0]}
-                      </span>
-                      <span className="text-[10px] sm:text-sm font-bold leading-none pt-0.5">
-                        {product.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 }).split(',')[1]}
-                      </span>
-
-                      {/* 🌟 O oldPrice voltou para o lugar dele aqui: */}
-                      {product.oldPrice && (
-                        <span className="text-[9px] sm:text-xs text-neutral-400 line-through ml-1.5 self-center">
-                          {product.oldPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Botão de Ação Dinâmico */}
-                    <div className="flex items-center gap-1.5">
-                      <button
-                        disabled={product.isSoldOut}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleWhatsAppLink(product);
-                        }}
-                        className={`w-full py-2 sm:py-2.5 rounded-md text-[10px] sm:text-xs font-bold transition-all shadow-sm ${product.isSoldOut
-                          ? 'bg-neutral-200 text-neutral-400 cursor-not-allowed'
-                          : 'bg-amber-400 hover:bg-amber-500 text-neutral-900 active:scale-[0.98]'
-                          }`}
-                      >
-                        {product.isSoldOut ? "Vendido" : "Comprar"}
-                      </button>
-                    </div>
-                  </div>
-                </div>
+        {/* Botão de Ação Dinâmico */}
+        <div className="flex items-center gap-1.5">
+          <button 
+            disabled={product.isSoldOut}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleWhatsAppLink(product);
+            }}
+            className={`w-full py-2 sm:py-2.5 rounded-md text-[10px] sm:text-xs font-bold transition-all shadow-sm ${
+              product.isSoldOut 
+                ? 'bg-neutral-200 text-neutral-400 cursor-not-allowed' 
+                : 'bg-amber-400 hover:bg-amber-500 text-neutral-900 active:scale-[0.98]'
+            }`}
+          >
+            {product.isSoldOut ? "Indisponível" : "Comprar"}
+          </button>
+        </div>
+      </div>
+    </div>
               </div>
             ))}
           </div>
