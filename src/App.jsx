@@ -80,7 +80,7 @@ const MEUS_PRODUTOS = [
     specifications: [
       { name: "Cor", value: "Azul" },
     ],
-    isSoldOut: false // 🔴 Adicione isso para marcar como esgotado
+    isSoldOut: true // 🔴 Adicione isso para marcar como esgotado
   },
   {
     id: 4,
